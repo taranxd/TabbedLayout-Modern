@@ -1,0 +1,27 @@
+{
+  "@pnp/generator-spfx": {
+    "framework": "none",
+    "pnpFramework": "none.plus",
+    "pnp-libraries": [
+      "jquery@3",
+      "@pnp/pnpjs",
+      "@pnp/spfx-property-controls"
+    ],
+    "pnp-vetting": [
+      "webpack-analyzer"
+    ],
+    "spfxenv": "spo"
+  },
+  "@microsoft/generator-sharepoint": {
+    "environment": "spo",
+    "framework": "none",
+    "isCreatingSolution": true,
+    "whichFolder": "subdir",
+    "version": "1.8.2",
+    "libraryName": "tabbed-page-layout",
+    "libraryId": "da0ef00c-a57f-4400-889a-e010f06504ab",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

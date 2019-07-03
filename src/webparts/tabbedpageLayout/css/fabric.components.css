@@ -1,0 +1,6480 @@
+/* Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information. */
+/**
+ * Office UI Fabric JS 1.4.0
+ * The JavaScript front-end framework for building experiences for Office 365.
+ **/
+/*
+  Your use of the content in the files referenced here are subject to the terms of the license at http://aka.ms/fabric-font-license
+*/
+.vi-Breadcrumb {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 23px 0 1px;
+}
+
+    .vi-Breadcrumb.is-overflow .vi-Breadcrumb-overflow {
+        display: inline;
+    }
+
+.vi-Breadcrumb-chevron {
+    font-size: 12px;
+    color: #666666;
+    vertical-align: top;
+    margin: 11px 7px;
+}
+
+.vi-Breadcrumb-list {
+    display: inline;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+}
+
+    .vi-Breadcrumb-list .vi-Breadcrumb-listItem {
+        list-style-type: none;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+        .vi-Breadcrumb-list .vi-Breadcrumb-listItem:last-of-type .vi-Breadcrumb-chevron {
+            display: none;
+        }
+
+.vi-Breadcrumb-overflow {
+    display: none;
+    position: relative;
+}
+
+    .vi-Breadcrumb-overflow .vi-Breadcrumb-overflowButton {
+        font-size: 16px;
+        display: inline-block;
+        color: #0078d7;
+        padding: 8px;
+        cursor: pointer;
+        vertical-align: top;
+    }
+
+.vi-Breadcrumb-overflowMenu {
+    display: none;
+    position: absolute;
+    margin-right: -2px;
+}
+
+    .vi-Breadcrumb-overflowMenu.is-open {
+        display: block;
+        top: 36px;
+        left: 0;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+        background-color: #ffffff;
+        border: 1px solid #c8c8c8;
+        z-index: 105;
+    }
+
+    .vi-Breadcrumb-overflowMenu::before {
+        position: absolute;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+        top: -6px;
+        left: 6px;
+        content: ' ';
+        width: 16px;
+        height: 16px;
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background-color: #ffffff;
+    }
+
+    .vi-Breadcrumb-overflowMenu .vi-ContextualMenu {
+        border: 0;
+        box-shadow: none;
+        position: relative;
+        width: 190px;
+    }
+
+        .vi-Breadcrumb-overflowMenu .vi-ContextualMenu.is-open {
+            margin-bottom: 0;
+        }
+
+.vi-Breadcrumb-itemLink,
+.vi-Breadcrumb-overflowButton {
+    text-decoration: none;
+    outline: transparent;
+}
+
+    .vi-Breadcrumb-itemLink:hover,
+    .vi-Breadcrumb-overflowButton:hover {
+        background-color: #f4f4f4;
+        cursor: pointer;
+    }
+
+    .vi-Breadcrumb-itemLink:focus,
+    .vi-Breadcrumb-overflowButton:focus {
+        outline: #767676 solid 1px;
+        color: #000000;
+    }
+
+    .vi-Breadcrumb-itemLink:active,
+    .vi-Breadcrumb-overflowButton:active {
+        outline: transparent;
+        background-color: #c8c8c8;
+    }
+
+.vi-Breadcrumb-itemLink {
+    font-weight: 100;
+    font-size: 21px;
+    color: #333333;
+    display: inline-block;
+    padding: 0 4px;
+    max-width: 160px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+@media screen and (max-width: 639px) {
+    .vi-Breadcrumb {
+        margin: 10px 0;
+    }
+
+    .vi-Breadcrumb-itemLink {
+        font-size: 17px;
+    }
+
+    .vi-Breadcrumb-chevron {
+        font-size: 10px;
+        margin: 8px 5px;
+    }
+
+    .vi-Breadcrumb-overflow .vi-Breadcrumb-overflowButton {
+        font-size: 16px;
+        padding: 5px 4px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .vi-Breadcrumb-itemLink {
+        font-size: 14px;
+        max-width: 116px;
+    }
+
+    .vi-Breadcrumb-chevron {
+        margin: 5px 4px;
+    }
+
+    .vi-Breadcrumb-overflow .vi-Breadcrumb-overflowButton {
+        padding: 2px 4px;
+    }
+}
+
+.vi-Button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    cursor: pointer;
+    display: inline-block;
+    height: 32px;
+    min-width: 80px;
+    padding: 4px 20px 6px;
+}
+
+    .vi-Button.is-hidden {
+        display: none;
+    }
+
+    .vi-Button:hover {
+        background-color: #eaeaea;
+        border-color: #eaeaea;
+    }
+
+        .vi-Button:hover .vi-Button-label {
+            color: #000000;
+        }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Button:hover {
+        color: #1aebff;
+        border-color: #1aebff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Button:hover {
+        color: #37006e;
+        border-color: #37006e;
+    }
+}
+
+.vi-Button:focus {
+    background-color: #eaeaea;
+    border-color: #0078d7;
+    outline: 1px solid transparent;
+}
+
+    .vi-Button:focus .vi-Button-label {
+        color: #000000;
+    }
+
+.vi-Button:active {
+    background-color: #0078d7;
+    border-color: #0078d7;
+}
+
+    .vi-Button:active .vi-Button-label {
+        color: #ffffff;
+    }
+
+.vi-Button:disabled,
+.vi-Button.is-disabled {
+    background-color: #f4f4f4;
+    border-color: #f4f4f4;
+    cursor: default;
+}
+
+    .vi-Button:disabled .vi-Button-label,
+    .vi-Button.is-disabled .vi-Button-label {
+        color: #a6a6a6;
+    }
+
+    .vi-Button:disabled:hover,
+    .vi-Button:disabled:focus,
+    .vi-Button.is-disabled:hover,
+    .vi-Button.is-disabled:focus {
+        outline: 0;
+    }
+
+.vi-Button-label {
+    color: #333333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.vi-Button-icon,
+.vi-Button-description {
+    display: none;
+}
+
+.vi-Button.vi-Button--primary {
+    background-color: #0078d7;
+    border-color: #0078d7;
+}
+
+    .vi-Button.vi-Button--primary .vi-Button-label {
+        color: #ffffff;
+    }
+
+    .vi-Button.vi-Button--primary:hover {
+        background-color: #005a9e;
+        border-color: #005a9e;
+    }
+
+    .vi-Button.vi-Button--primary:focus {
+        background-color: #005a9e;
+        border-color: #004578;
+    }
+
+    .vi-Button.vi-Button--primary:active {
+        background-color: #0078d7;
+        border-color: #0078d7;
+    }
+
+    .vi-Button.vi-Button--primary:disabled,
+    .vi-Button.vi-Button--primary.is-disabled {
+        background-color: #f4f4f4;
+        border-color: #f4f4f4;
+    }
+
+        .vi-Button.vi-Button--primary:disabled .vi-Button-label,
+        .vi-Button.vi-Button--primary.is-disabled .vi-Button-label {
+            color: #a6a6a6;
+        }
+
+.vi-Button.vi-Button--small {
+    min-width: 60px;
+    min-height: 24px;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 4px;
+}
+
+    .vi-Button.vi-Button--small .vi-Button-label {
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+.vi-Button.vi-Button--hero {
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    position: relative;
+}
+
+    .vi-Button.vi-Button--hero .vi-Button-icon {
+        color: #0078d7;
+        display: inline-block;
+        font-size: 12px;
+        margin-right: 4px;
+        padding-top: 5px;
+        text-align: center;
+    }
+
+        .vi-Button.vi-Button--hero .vi-Button-icon .vi-Icon {
+            border-radius: 18px;
+            border: 1px solid #0078d7;
+            font-size: 12px;
+            height: 18px;
+            line-height: 18px;
+            width: 18px;
+        }
+
+    .vi-Button.vi-Button--hero .vi-Button-label {
+        color: #0078d7;
+        font-size: 21px;
+        font-weight: 100;
+        position: relative;
+        text-decoration: none;
+        vertical-align: top;
+    }
+
+    .vi-Button.vi-Button--hero:hover .vi-Button-icon,
+    .vi-Button.vi-Button--hero:focus .vi-Button-icon {
+        color: #005a9e;
+    }
+
+        .vi-Button.vi-Button--hero:hover .vi-Button-icon .vi-Icon,
+        .vi-Button.vi-Button--hero:focus .vi-Button-icon .vi-Icon {
+            border: 1px solid #005a9e;
+        }
+
+    .vi-Button.vi-Button--hero:hover .vi-Button-label,
+    .vi-Button.vi-Button--hero:focus .vi-Button-label {
+        color: #004578;
+    }
+
+    .vi-Button.vi-Button--hero:active .vi-Button-icon {
+        color: #0078d7;
+    }
+
+        .vi-Button.vi-Button--hero:active .vi-Button-icon .vi-Icon {
+            border: 1px solid #0078d7;
+        }
+
+    .vi-Button.vi-Button--hero:active .vi-Button-label {
+        color: #0078d7;
+    }
+
+    .vi-Button.vi-Button--hero:disabled .vi-Button-icon,
+    .vi-Button.vi-Button--hero.is-disabled .vi-Button-icon {
+        color: #c8c8c8;
+    }
+
+        .vi-Button.vi-Button--hero:disabled .vi-Button-icon .vi-Icon,
+        .vi-Button.vi-Button--hero.is-disabled .vi-Button-icon .vi-Icon {
+            border: 1px solid #c8c8c8;
+        }
+
+    .vi-Button.vi-Button--hero:disabled .vi-Button-label,
+    .vi-Button.vi-Button--hero.is-disabled .vi-Button-label {
+        color: #a6a6a6;
+    }
+
+.vi-Button.vi-Button--compound {
+    display: block;
+    height: auto;
+    max-width: 280px;
+    min-height: 72px;
+    padding: 20px;
+}
+
+    .vi-Button.vi-Button--compound .vi-Button-label {
+        display: block;
+        font-weight: 600;
+        position: relative;
+        text-align: left;
+        margin-top: -5px;
+    }
+
+    .vi-Button.vi-Button--compound .vi-Button-description {
+        color: #666666;
+        display: block;
+        font-weight: 400;
+        font-size: 12px;
+        position: relative;
+        text-align: left;
+        top: 3px;
+    }
+
+    .vi-Button.vi-Button--compound:hover .vi-Button-description {
+        color: #212121;
+    }
+
+    .vi-Button.vi-Button--compound:focus {
+        border-color: #0078d7;
+        background-color: #f4f4f4;
+    }
+
+        .vi-Button.vi-Button--compound:focus .vi-Button-label {
+            color: #333333;
+        }
+
+        .vi-Button.vi-Button--compound:focus .vi-Button-description {
+            color: #666666;
+        }
+
+    .vi-Button.vi-Button--compound:active {
+        background-color: #0078d7;
+    }
+
+        .vi-Button.vi-Button--compound:active .vi-Button-description,
+        .vi-Button.vi-Button--compound:active .vi-Button-label {
+            color: #ffffff;
+        }
+
+    .vi-Button.vi-Button--compound:disabled .vi-Button-label,
+    .vi-Button.vi-Button--compound:disabled .vi-Button-description,
+    .vi-Button.vi-Button--compound.is-disabled .vi-Button-label,
+    .vi-Button.vi-Button--compound.is-disabled .vi-Button-description {
+        color: #a6a6a6;
+    }
+
+    .vi-Button.vi-Button--compound:disabled:focus,
+    .vi-Button.vi-Button--compound:disabled:active,
+    .vi-Button.vi-Button--compound.is-disabled:focus,
+    .vi-Button.vi-Button--compound.is-disabled:active {
+        border-color: #f4f4f4;
+        background-color: #f4f4f4;
+    }
+
+        .vi-Button.vi-Button--compound:disabled:focus .vi-Button-label,
+        .vi-Button.vi-Button--compound:disabled:focus .vi-Button-description,
+        .vi-Button.vi-Button--compound:disabled:active .vi-Button-label,
+        .vi-Button.vi-Button--compound:disabled:active .vi-Button-description,
+        .vi-Button.vi-Button--compound.is-disabled:focus .vi-Button-label,
+        .vi-Button.vi-Button--compound.is-disabled:focus .vi-Button-description,
+        .vi-Button.vi-Button--compound.is-disabled:active .vi-Button-label,
+        .vi-Button.vi-Button--compound.is-disabled:active .vi-Button-description {
+            color: #a6a6a6;
+        }
+
+.vi-Callout {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    width: 288px;
+}
+
+    .vi-Callout.is-hidden {
+        display: none;
+    }
+
+.vi-Callout-header {
+    z-index: 105;
+    padding-top: 24px;
+    padding-bottom: 12px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.vi-Callout-title {
+    margin: 0;
+    font-weight: 300;
+    font-size: 21px;
+}
+
+.vi-Callout-subText {
+    margin: 0;
+    font-weight: 300;
+    color: #333333;
+    font-size: 12px;
+}
+
+.vi-Callout-close {
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    color: #666666;
+    z-index: 110;
+}
+
+.vi-Callout-link {
+    font-size: 14px;
+}
+
+.vi-Callout-inner {
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 12px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.vi-Callout-actions {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+    .vi-Callout-actions .vi-CommandButton.vi-CommandButton--inline {
+        height: 27px;
+        line-height: 27px;
+    }
+
+        .vi-Callout-actions .vi-CommandButton.vi-CommandButton--inline .vi-CommandButton-button {
+            height: 27px;
+            line-height: 27px;
+        }
+
+        .vi-Callout-actions .vi-CommandButton.vi-CommandButton--inline .vi-CommandButton-label {
+            line-height: 27px;
+        }
+
+        .vi-Callout-actions .vi-CommandButton.vi-CommandButton--inline .vi-CommandButton-icon {
+            line-height: 27px;
+        }
+
+        .vi-Callout-actions .vi-CommandButton.vi-CommandButton--inline:hover .vi-Button,
+        .vi-Callout-actions .vi-CommandButton.vi-CommandButton--inline:focus .vi-Button {
+            color: #0078d7;
+        }
+
+    .vi-Callout-actions .vi-Callout-button {
+        margin-right: 12px;
+    }
+
+.vi-Callout.vi-Callout--OOBE .vi-Callout-header {
+    padding: 28px 24px;
+    background-color: #0078d7;
+}
+
+.vi-Callout.vi-Callout--OOBE .vi-Callout-title {
+    font-weight: 100;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.vi-Callout.vi-Callout--OOBE .vi-Callout-inner {
+    padding-top: 20px;
+}
+
+.vi-Callout.vi-Callout--OOBE .vi-Callout-subText {
+    font-size: 14px;
+}
+
+.vi-Callout.vi-Callout--actionText .vi-Callout-actions {
+    border-top: 1px solid #eaeaea;
+    padding-top: 12px;
+}
+
+.vi-Callout.vi-Callout--actionText .vi-Callout-inner {
+    padding-bottom: 12px;
+}
+
+.vi-Callout.vi-Callout--peek .vi-Callout-header {
+    padding-bottom: 0;
+}
+
+.vi-Callout.vi-Callout--peek .vi-Callout-title {
+    font-size: 14px;
+}
+
+.vi-Callout.vi-Callout--peek .vi-Callout-actions {
+    margin-top: 12px;
+    margin-bottom: -4px;
+}
+
+.vi-CheckBox {
+    box-sizing: border-box;
+    color: #333333;
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    min-height: 36px;
+    position: relative;
+}
+
+    .vi-CheckBox .vi-Label {
+        font-size: 14px;
+        padding: 0 0 0 26px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+.vi-CheckBox-input {
+    position: absolute;
+    opacity: 0;
+}
+
+.vi-CheckBox-field::before {
+    content: '';
+    display: inline-block;
+    border: 2px solid #a6a6a6;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-weight: normal;
+    position: absolute;
+    box-sizing: border-box;
+    transition-property: background, border, border-color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.23, 1);
+}
+
+.vi-CheckBox-field::after {
+    content: '\E73E';
+    font-family: 'FabricMDL2Icons';
+    display: none;
+    position: absolute;
+    font-weight: 900;
+    background-color: transparent;
+    font-size: 13px;
+    top: 0;
+    color: #ffffff;
+    line-height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-CheckBox-field::after {
+        color: #000000;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-CheckBox-field::after {
+        color: #ffffff;
+    }
+}
+
+.vi-CheckBox-field {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 8px;
+    position: relative;
+    outline: 0;
+    vertical-align: top;
+}
+
+    .vi-CheckBox-field:hover::before,
+    .vi-CheckBox-field:focus::before {
+        border-color: #767676;
+    }
+
+    .vi-CheckBox-field:hover .vi-Label,
+    .vi-CheckBox-field:focus .vi-Label {
+        color: #000000;
+    }
+
+    .vi-CheckBox-field.is-disabled {
+        cursor: default;
+    }
+
+        .vi-CheckBox-field.is-disabled::before {
+            background-color: #c8c8c8;
+            border-color: #c8c8c8;
+            color: #c8c8c8;
+        }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-CheckBox-field.is-disabled::before {
+        border-color: #00ff00;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-CheckBox-field.is-disabled::before {
+        border-color: #600000;
+    }
+}
+
+.vi-CheckBox-field.is-disabled .vi-Label {
+    color: #a6a6a6;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-CheckBox-field.is-disabled .vi-Label {
+        color: #00ff00;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-CheckBox-field.is-disabled .vi-Label {
+        color: #600000;
+    }
+}
+
+.vi-CheckBox-field.in-focus::before {
+    border-color: #767676;
+}
+
+.vi-CheckBox-field.in-focus.is-disabled::before {
+    border-color: #c8c8c8;
+}
+
+.vi-CheckBox-field.in-focus.is-checked::before {
+    border-color: #106ebe;
+}
+
+.vi-CheckBox-field.is-checked::before {
+    border: 10px solid #0078d7;
+    background-color: #0078d7;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-CheckBox-field.is-checked::before {
+        border-color: #1aebff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-CheckBox-field.is-checked::before {
+        border-color: #37006e;
+    }
+}
+
+.vi-CheckBox-field.is-checked::after {
+    display: block;
+}
+
+.vi-CheckBox-field.is-checked:hover::before,
+.vi-CheckBox-field.is-checked:focus::before {
+    border-color: #106ebe;
+}
+
+.vi-RadioButton {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    min-height: 36px;
+    position: relative;
+}
+
+    .vi-RadioButton .vi-Label {
+        font-size: 14px;
+        padding: 0 0 0 26px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+.vi-RadioButton-input {
+    position: absolute;
+    opacity: 0;
+}
+
+.vi-RadioButton-field::before {
+    content: '';
+    display: inline-block;
+    border: 2px solid #a6a6a6;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-weight: normal;
+    position: absolute;
+    box-sizing: border-box;
+    transition-property: border-color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.23, 1);
+    border-radius: 50%;
+}
+
+.vi-RadioButton-field::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    bottom: 0;
+    right: 0;
+    transition-property: top, left, width, height;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.23, 1);
+    box-sizing: border-box;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-RadioButton-field::after {
+        color: #00ff00;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-RadioButton-field::after {
+        color: #600000;
+    }
+}
+
+.vi-RadioButton-field {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 8px;
+    position: relative;
+    outline: 0;
+    vertical-align: top;
+}
+
+    .vi-RadioButton-field:hover::before,
+    .vi-RadioButton-field:focus::before {
+        border-color: #767676;
+    }
+
+    .vi-RadioButton-field:hover .vi-Label,
+    .vi-RadioButton-field:focus .vi-Label {
+        color: #000000;
+    }
+
+    .vi-RadioButton-field.is-disabled {
+        cursor: default;
+    }
+
+        .vi-RadioButton-field.is-disabled::before {
+            background-color: #c8c8c8;
+            border-color: #c8c8c8;
+            color: #c8c8c8;
+        }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-RadioButton-field.is-disabled::before {
+        border-color: #00ff00;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-RadioButton-field.is-disabled::before {
+        border-color: #600000;
+    }
+}
+
+.vi-RadioButton-field.is-disabled .vi-Label {
+    color: #a6a6a6;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-RadioButton-field.is-disabled .vi-Label {
+        color: #00ff00;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-RadioButton-field.is-disabled .vi-Label {
+        color: #600000;
+    }
+}
+
+.vi-RadioButton-field.is-disabled:hover::before,
+.vi-RadioButton-field.is-disabled:focus::before {
+    border-color: #c8c8c8;
+}
+
+.vi-RadioButton-field.in-focus::before {
+    border-color: #767676;
+}
+
+.vi-RadioButton-field.is-checked::before {
+    border: 2px solid #0078d7;
+    background-color: transparent;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-RadioButton-field.is-checked::before {
+        border-color: #1aebff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-RadioButton-field.is-checked::before {
+        border-color: #37006e;
+    }
+}
+
+.vi-RadioButton-field.is-checked::after {
+    background-color: #0078d7;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-RadioButton-field.is-checked::after {
+        background-color: #1aebff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-RadioButton-field.is-checked::after {
+        background-color: #37006e;
+    }
+}
+
+.vi-RadioButton-field.is-checked:hover::before,
+.vi-RadioButton-field.is-checked:focus::before {
+    border-color: #0078d7;
+}
+
+.vi-RadioButton-field.is-checked.in-focus::before {
+    border-color: #0078d7;
+}
+
+.vi-ChoiceFieldGroup {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 4px;
+}
+
+    .vi-ChoiceFieldGroup .vi-ChoiceFieldGroup-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+.vi-CommandBar {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f4f4f4;
+    height: 40px;
+    white-space: nowrap;
+    padding-left: 0;
+    border: 0;
+    position: relative;
+}
+
+    .vi-CommandBar:focus {
+        outline: none;
+    }
+
+    .vi-CommandBar .vi-CommandButton--actionButton {
+        border-right: 1px solid #eaeaea;
+    }
+
+    .vi-CommandBar .vi-Button {
+        height: 100%;
+    }
+
+        .vi-CommandBar .vi-Button.vi-Button--noLabel .vi-Button-icon {
+            padding-right: 0;
+        }
+
+        .vi-CommandBar .vi-Button.is-hidden {
+            display: none;
+        }
+
+    .vi-CommandBar .vi-SearchBox,
+    .vi-CommandBar .vi-SearchBox-field,
+    .vi-CommandBar .vi-SearchBox-label {
+        height: 100%;
+    }
+
+    .vi-CommandBar .vi-SearchBox {
+        display: inline-block;
+        vertical-align: top;
+        transition: margin-right 0.267s;
+    }
+
+        .vi-CommandBar .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed.is-active {
+            width: 220px;
+        }
+
+@media only screen and (max-width: 639px) {
+    .vi-CommandBar .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed.is-active {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+}
+
+.vi-CommandBar .vi-CommandBar-overflowButton .vi-CommandButton-button {
+    font-size: 18px;
+    padding: 0 11px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .vi-CommandBar .vi-SearchBox {
+        margin-right: 24px;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .vi-CommandBar {
+        height: 44px;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .vi-CommandBar.search-expanded .vi-SearchBox {
+        margin-right: 8px;
+    }
+
+    .vi-CommandBar .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed {
+        transition: none;
+    }
+}
+
+.vi-CommandBar-mainArea {
+    overflow-x: hidden;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+
+.vi-CommandBar-sideCommands {
+    float: right;
+    text-align: right;
+    width: auto;
+    padding-right: 4px;
+    height: 100%;
+}
+
+    .vi-CommandBar-sideCommands .vi-Button:last-child {
+        margin-right: 0;
+    }
+
+@media only screen and (min-width: 640px) {
+    .vi-CommandBar-sideCommands {
+        min-width: 128px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .vi-CommandBar-sideCommands {
+        padding-right: 20px;
+    }
+}
+
+.vi-CommandButton {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+    .vi-CommandButton.is-hidden {
+        display: none;
+    }
+
+    .vi-CommandButton:disabled .vi-CommandButton-button,
+    .vi-CommandButton.is-disabled .vi-CommandButton-button {
+        cursor: default;
+    }
+
+        .vi-CommandButton:disabled .vi-CommandButton-button:hover,
+        .vi-CommandButton.is-disabled .vi-CommandButton-button:hover {
+            background-color: #eff6fc;
+        }
+
+        .vi-CommandButton:disabled .vi-CommandButton-button .vi-CommandButton-label,
+        .vi-CommandButton.is-disabled .vi-CommandButton-button .vi-CommandButton-label {
+            color: #a6a6a6;
+        }
+
+        .vi-CommandButton:disabled .vi-CommandButton-button .vi-CommandButton-icon,
+        .vi-CommandButton.is-disabled .vi-CommandButton-button .vi-CommandButton-icon {
+            color: #a6a6a6;
+        }
+
+    .vi-CommandButton .vi-ContextualMenu {
+        display: none;
+    }
+
+.vi-CommandButton-button,
+.vi-CommandButton-splitIcon {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    outline: 1px solid transparent;
+    padding: 0 8px;
+    position: relative;
+    vertical-align: top;
+    background: transparent;
+    min-width: initial; /*viizcom: classic SP page will break this issue 5999*/
+}
+
+    .vi-CommandButton-button:hover,
+    .vi-CommandButton-splitIcon:hover {
+        background-color: #eaeaea;
+    }
+
+        .vi-CommandButton-button:hover .vi-CommandButton-label,
+        .vi-CommandButton-splitIcon:hover .vi-CommandButton-label {
+            color: #212121;
+        }
+
+    .vi-CommandButton-button:active,
+    .vi-CommandButton-splitIcon:active {
+        background-color: #eaeaea;
+    }
+
+    .vi-CommandButton-button:focus::before,
+    .vi-CommandButton-splitIcon:focus::before {
+        top: 3px;
+        left: 3px;
+        right: 3px;
+        bottom: 3px;
+        border: 1px solid #333333;
+        position: absolute;
+        z-index: 10;
+        content: '';
+        outline: none;
+    }
+
+    .vi-CommandButton-button:focus,
+    .vi-CommandButton-splitIcon:focus {
+        outline: 0;
+    }
+
+@media only screen and (max-width: 639px) {
+    .vi-CommandButton-button,
+    .vi-CommandButton-splitIcon {
+        height: 44px;
+    }
+
+        .vi-CommandButton-button .vi-CommandButton-icon,
+        .vi-CommandButton-splitIcon .vi-CommandButton-icon {
+            font-size: 20px;
+        }
+
+        .vi-CommandButton-button .vi-CommandButton-label,
+        .vi-CommandButton-splitIcon .vi-CommandButton-label {
+            line-height: 44px;
+        }
+}
+
+.vi-CommandButton-button {
+    border: 0;
+    margin: 0;
+}
+
+.vi-CommandButton + .vi-CommandButton {
+    margin-left: 8px;
+}
+
+@media only screen and (max-width: 639px) {
+    .vi-CommandButton + .vi-CommandButton {
+        margin-left: 4px;
+    }
+}
+
+.vi-CommandButton-icon {
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    font-size: 16px;
+    min-width: 16px;
+    height: 100%;
+}
+
+    .vi-CommandButton-icon .vi-Icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+.vi-CommandButton-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 40px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+    .vi-CommandButton-label:hover {
+        color: #212121;
+    }
+
+.vi-CommandButton-dropdownIcon,
+.vi-CommandButton-splitIcon {
+    display: inline-block;
+    position: relative;
+    color: #333333;
+    font-size: 12px;
+    font-weight: 300;
+    min-width: 12px;
+    height: 100%;
+    vertical-align: top;
+    margin-left: 8px;
+}
+
+    .vi-CommandButton-dropdownIcon .vi-Icon,
+    .vi-CommandButton-splitIcon .vi-Icon {
+        line-height: normal;
+        padding-top: 16px;
+    }
+
+    .vi-CommandButton-dropdownIcon:focus::before,
+    .vi-CommandButton-splitIcon:focus::before {
+        top: 3px;
+        left: 3px;
+        right: 3px;
+        bottom: 3px;
+        border: 1px solid #333333;
+        position: absolute;
+        z-index: 10;
+        content: '';
+        outline: none;
+    }
+
+@media only screen and (max-width: 639px) {
+    .vi-CommandButton-dropdownIcon,
+    .vi-CommandButton-splitIcon {
+        display: none;
+    }
+}
+
+.vi-CommandButton-splitIcon {
+    margin-left: -2px;
+    width: 27px;
+    border: 0;
+}
+
+    .vi-CommandButton-splitIcon .vi-Icon {
+        margin-left: -1px;
+        position: relative;
+        padding-top: 16px;
+    }
+
+        .vi-CommandButton-splitIcon .vi-Icon::after {
+            position: absolute;
+            content: ' ';
+            width: 1px;
+            height: 16px;
+            top: 12px;
+            left: -8px;
+            border-left: 1px solid #c8c8c8;
+        }
+
+.vi-CommandButton.vi-CommandButton--noLabel .vi-CommandButton-icon {
+    margin-right: 0;
+}
+
+.vi-CommandButton.vi-CommandButton--noLabel .vi-CommandButton-label {
+    display: none;
+}
+
+.vi-CommandButton.vi-CommandButton--noLabel .vi-CommandButton-button {
+    padding: 0 12px;
+}
+
+.vi-CommandButton.vi-CommandButton--inline .vi-CommandButton-button {
+    background: none;
+}
+
+.vi-CommandButton.vi-CommandButton--actionButton .vi-CommandButton-button {
+    width: 50px;
+    height: 40px;
+}
+
+.vi-CommandButton.vi-CommandButton--actionButton .vi-CommandButton-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    padding-right: 0;
+}
+
+.vi-CommandButton.vi-CommandButton--pivot.is-active::before {
+    content: '';
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #0078d7;
+    bottom: 0;
+    z-index: 5;
+}
+
+.vi-CommandButton.vi-CommandButton--pivot:hover::before {
+    content: '';
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #0078d7;
+    bottom: 0;
+    z-index: 5;
+}
+
+.vi-CommandButton.vi-CommandButton--textOnly .vi-CommandButton-label,
+.vi-CommandButton.vi-CommandButton--pivot .vi-CommandButton-label {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 479px) {
+    .vi-CommandButton.vi-CommandButton--textOnly .vi-CommandButton-label,
+    .vi-CommandButton.vi-CommandButton--pivot .vi-CommandButton-label {
+        font-size: 16px;
+    }
+}
+
+.vi-ContextualMenu {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    min-width: 180px;
+    max-width: 220px;
+    list-style-type: none;
+    position: relative;
+    background-color: #ffffff;
+}
+
+    .vi-ContextualMenu.is-hidden {
+        display: none;
+    }
+
+.vi-ContextualMenu-item {
+    position: relative;
+}
+
+.vi-ContextualMenu-link {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #333333;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: block;
+    height: 36px;
+    overflow: hidden;
+    line-height: 34px;
+    padding: 0 16px 0 25px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+    .vi-ContextualMenu-link:hover,
+    .vi-ContextualMenu-link:active,
+    .vi-ContextualMenu-link:focus {
+        background-color: #f4f4f4;
+        color: #212121;
+    }
+
+        .vi-ContextualMenu-link:hover .vi-ContextualMenu-subMenuIcon,
+        .vi-ContextualMenu-link:active .vi-ContextualMenu-subMenuIcon,
+        .vi-ContextualMenu-link:focus .vi-ContextualMenu-subMenuIcon {
+            color: #212121;
+        }
+
+    .vi-ContextualMenu-link:focus {
+        outline: transparent;
+        border: 1px solid #666666;
+    }
+
+    .vi-ContextualMenu-link.is-selected {
+        background-color: #dadada;
+        color: #000000;
+        font-weight: 600;
+    }
+
+        .vi-ContextualMenu-link.is-selected ~ .vi-ContextualMenu-subMenuIcon {
+            color: #000000;
+        }
+
+        .vi-ContextualMenu-link.is-selected:hover {
+            background-color: #d0d0d0;
+        }
+
+    .vi-ContextualMenu-link.is-disabled {
+        color: #a6a6a6;
+        background-color: #ffffff;
+        pointer-events: none;
+    }
+
+        .vi-ContextualMenu-link.is-disabled:active,
+        .vi-ContextualMenu-link.is-disabled:focus {
+            border-color: #ffffff;
+        }
+
+        .vi-ContextualMenu-link.is-disabled .vi-Icon {
+            color: #a6a6a6;
+            pointer-events: none;
+            cursor: default;
+        }
+
+.vi-ContextualMenu-item.vi-ContextualMenu-item--divider {
+    cursor: default;
+    display: block;
+    height: 1px;
+    background-color: #eaeaea;
+    position: relative;
+}
+
+.vi-ContextualMenu-item.vi-ContextualMenu-item--header {
+    color: #0078d7;
+    font-size: 12px;
+    text-transform: uppercase;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 18px;
+}
+
+.vi-ContextualMenu-item.vi-ContextualMenu-item--hasMenu .vi-ContextualMenu {
+    position: absolute;
+    top: -1px;
+    left: 178px;
+}
+
+.vi-ContextualMenu-subMenuIcon,
+.vi-ContextualMenu-caretRight {
+    color: #333333;
+    font-size: 8px;
+    font-weight: 600;
+    width: 24px;
+    height: 36px;
+    line-height: 36px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.vi-ContextualMenu.vi-ContextualMenu--multiselect .vi-ContextualMenu-item.vi-ContextualMenu-item--header {
+    padding: 0 16px 0 26px;
+}
+
+.vi-ContextualMenu.vi-ContextualMenu--multiselect .vi-ContextualMenu-link.is-selected {
+    background-color: #ffffff;
+    font-weight: 600;
+    color: #333333;
+}
+
+    .vi-ContextualMenu.vi-ContextualMenu--multiselect .vi-ContextualMenu-link.is-selected::after {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-family: 'FabricMDL2Icons';
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        color: #333333;
+        content: '\E73E';
+        font-size: 10px;
+        font-weight: 800;
+        height: 36px;
+        line-height: 36px;
+        position: absolute;
+        left: 7px;
+    }
+
+    .vi-ContextualMenu.vi-ContextualMenu--multiselect .vi-ContextualMenu-link.is-selected:hover,
+    .vi-ContextualMenu.vi-ContextualMenu--multiselect .vi-ContextualMenu-link.is-selected:focus {
+        color: #212121;
+        background-color: #f4f4f4;
+    }
+
+        .vi-ContextualMenu.vi-ContextualMenu--multiselect .vi-ContextualMenu-link.is-selected:hover::after,
+        .vi-ContextualMenu.vi-ContextualMenu--multiselect .vi-ContextualMenu-link.is-selected:focus::after {
+            color: #212121;
+        }
+
+    .vi-ContextualMenu.vi-ContextualMenu--multiselect .vi-ContextualMenu-link.is-selected:active {
+        color: #000000;
+        background-color: #d0d0d0;
+    }
+
+        .vi-ContextualMenu.vi-ContextualMenu--multiselect .vi-ContextualMenu-link.is-selected:active::after {
+            color: #000000;
+        }
+
+.vi-ContextualMenu.vi-ContextualMenu--hasIcons .vi-ContextualMenu-link,
+.vi-ContextualMenu.vi-ContextualMenu--hasChecks .vi-ContextualMenu-link {
+    padding-left: 40px;
+}
+
+.vi-ContextualMenu.vi-ContextualMenu--hasIcons .vi-Icon,
+.vi-ContextualMenu.vi-ContextualMenu--hasChecks .vi-Icon {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40px;
+    text-align: center;
+}
+
+.vi-ContextualMenu.vi-ContextualMenu--hasIcons {
+    width: 220px;
+}
+
+.vi-DatePicker {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 17px;
+    z-index: 300;
+}
+
+    .vi-DatePicker .vi-TextField {
+        position: relative;
+    }
+
+.vi-DatePicker-picker {
+    color: #000000;
+    font-size: 14px;
+    position: relative;
+    text-align: left;
+    z-index: 0;
+}
+
+.vi-DatePicker-event {
+    color: #666666;
+    font-size: 21px;
+    line-height: 20px;
+    pointer-events: none;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    z-index: 5;
+}
+
+.vi-DatePicker-holder {
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    background: #ffffff;
+    position: absolute;
+    min-width: 300px;
+    display: none;
+}
+
+.vi-DatePicker-picker.vi-DatePicker-picker--opened .vi-DatePicker-holder {
+    animation-name: fadeIn, slideDownIn10;
+    -webkit-animation-duration: 0.167s;
+    -moz-animation-duration: 0.167s;
+    -ms-animation-duration: 0.167s;
+    -o-animation-duration: 0.167s;
+    animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+    animation-fill-mode: both;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    border: 1px solid #eaeaea;
+    display: block;
+}
+
+.vi-DatePicker-picker--opened {
+    position: relative;
+    z-index: 10;
+}
+
+.vi-DatePicker-frame {
+    padding: 1px;
+}
+
+.vi-DatePicker-wrap {
+    margin: -1px;
+    padding: 9px;
+}
+
+.vi-DatePicker-dayPicker {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.vi-DatePicker-header {
+    height: 40px;
+    line-height: 44px;
+}
+
+.vi-DatePicker-month,
+.vi-DatePicker-year {
+    display: inline-block;
+    font-weight: 100;
+    font-size: 21px;
+    color: #0078d7;
+    margin-top: -1px;
+}
+
+    .vi-DatePicker-month:hover,
+    .vi-DatePicker-year:hover {
+        color: #005a9e;
+        cursor: pointer;
+    }
+
+.vi-DatePicker-month {
+    margin-left: 15px;
+}
+
+.vi-DatePicker-year {
+    margin-left: 5px;
+}
+
+.vi-DatePicker-table {
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    font-size: inherit;
+}
+
+    .vi-DatePicker-table td {
+        margin: 0;
+        padding: 0;
+    }
+
+        .vi-DatePicker-table td:hover {
+            outline: 1px solid transparent;
+        }
+
+.vi-DatePicker-day,
+.vi-DatePicker-weekday {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #333333;
+}
+
+.vi-DatePicker-day--today {
+    position: relative;
+    background-color: #b3d6f2;
+}
+
+.vi-DatePicker-day--disabled::before {
+    border-top-color: #a6a6a6;
+}
+
+.vi-DatePicker-day--outfocus {
+    color: #a6a6a6;
+    font-weight: 400;
+}
+
+    .vi-DatePicker-day--infocus:hover,
+    .vi-DatePicker-day--outfocus:hover {
+        cursor: pointer;
+        color: #000000;
+        background: #eaeaea;
+    }
+
+.vi-DatePicker-day--highlighted:hover,
+.vi-DatePicker-picker--focused .vi-DatePicker-day--highlighted {
+    cursor: pointer;
+    color: #ffffff;
+    background: #0078d7;
+}
+
+.vi-DatePicker-day--highlighted.vi-DatePicker-day--disabled,
+.vi-DatePicker-day--highlighted.vi-DatePicker-day--disabled:hover {
+    background: #a6a6a6;
+}
+
+.vi-DatePicker-monthPicker,
+.vi-DatePicker-yearPicker {
+    display: none;
+}
+
+.vi-DatePicker-monthComponents {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    left: 9px;
+}
+
+.vi-DatePicker-yearComponents,
+.vi-DatePicker-decadeComponents {
+    position: absolute;
+    right: 10px;
+}
+
+.vi-DatePicker-prevMonth,
+.vi-DatePicker-nextMonth,
+.vi-DatePicker-prevYear,
+.vi-DatePicker-nextYear,
+.vi-DatePicker-prevDecade,
+.vi-DatePicker-nextDecade {
+    width: 40px;
+    height: 40px;
+    display: block;
+    float: right;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 21px;
+    color: #666666;
+    position: relative;
+    top: 3px;
+}
+
+    .vi-DatePicker-prevMonth:hover,
+    .vi-DatePicker-nextMonth:hover,
+    .vi-DatePicker-prevYear:hover,
+    .vi-DatePicker-nextYear:hover,
+    .vi-DatePicker-prevDecade:hover,
+    .vi-DatePicker-nextDecade:hover {
+        color: #212121;
+        cursor: pointer;
+        outline: 1px solid transparent;
+    }
+
+.vi-DatePicker-headerToggleView {
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 140px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.vi-DatePicker-currentYear,
+.vi-DatePicker-currentDecade {
+    display: block;
+    font-weight: 300;
+    font-size: 21px;
+    height: 40px;
+    line-height: 42px;
+    margin-left: 15px;
+}
+
+.vi-DatePicker-currentYear {
+    color: #0078d7;
+}
+
+    .vi-DatePicker-currentYear:hover {
+        color: #005a9e;
+        cursor: pointer;
+    }
+
+.vi-DatePicker-optionGrid {
+    position: relative;
+    height: 210px;
+    width: 280px;
+    margin: 10px 0 30px 5px;
+}
+
+.vi-DatePicker-monthOption,
+.vi-DatePicker-yearOption {
+    background-color: #f4f4f4;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    float: left;
+    margin: 0 10px 10px 0;
+    font-weight: 400;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+}
+
+    .vi-DatePicker-monthOption:hover,
+    .vi-DatePicker-yearOption:hover {
+        background-color: #c8c8c8;
+        outline: 1px solid transparent;
+    }
+
+    .vi-DatePicker-monthOption.is-highlighted,
+    .vi-DatePicker-yearOption.is-highlighted {
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+.vi-DatePicker-goToday {
+    bottom: 9px;
+    color: #0078d7;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    position: absolute;
+    right: 9px;
+}
+
+    .vi-DatePicker-goToday:hover {
+        outline: 1px solid transparent;
+    }
+
+.vi-DatePicker.is-pickingYears .vi-DatePicker-dayPicker,
+.vi-DatePicker.is-pickingYears .vi-DatePicker-monthComponents {
+    display: none;
+}
+
+.vi-DatePicker.is-pickingYears .vi-DatePicker-monthPicker {
+    display: none;
+}
+
+.vi-DatePicker.is-pickingYears .vi-DatePicker-yearPicker {
+    display: block;
+}
+
+@media (min-width: 460px) {
+    .vi-DatePicker-holder {
+        width: 440px;
+    }
+
+    .vi-DatePicker-month,
+    .vi-DatePicker-year {
+        font-weight: 300;
+        font-size: 17px;
+        color: #333333;
+    }
+
+        .vi-DatePicker-month:hover,
+        .vi-DatePicker-year:hover {
+            color: #333333;
+            cursor: default;
+        }
+
+    .vi-DatePicker-header {
+        height: 30px;
+        line-height: 28px;
+    }
+
+    .vi-DatePicker-dayPicker {
+        box-sizing: border-box;
+        border-right: 1px solid #eaeaea;
+        width: 220px;
+        margin: -10px 0;
+        padding: 10px 0;
+    }
+
+    .vi-DatePicker-monthPicker {
+        display: block;
+    }
+
+    .vi-DatePicker-monthPicker,
+    .vi-DatePicker-yearPicker {
+        top: 9px;
+        left: 238px;
+        position: absolute;
+    }
+
+    .vi-DatePicker-optionGrid {
+        width: 200px;
+        height: auto;
+        margin: 10px 0 0;
+    }
+
+    .vi-DatePicker-monthComponents {
+        width: 210px;
+    }
+
+    .vi-DatePicker-month {
+        margin-left: 12px;
+    }
+
+    .vi-DatePicker-day,
+    .vi-DatePicker-weekday {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .vi-DatePicker-prevMonth,
+    .vi-DatePicker-nextMonth,
+    .vi-DatePicker-prevYear,
+    .vi-DatePicker-nextYear,
+    .vi-DatePicker-prevDecade,
+    .vi-DatePicker-nextDecade {
+        font-size: 17px;
+        width: 30px;
+        height: 30px;
+        line-height: 29px;
+    }
+
+    .vi-DatePicker-toggleMonthView {
+        display: none;
+    }
+
+    .vi-DatePicker-currentYear,
+    .vi-DatePicker-currentDecade {
+        font-size: 17px;
+        margin: 0;
+        height: 30px;
+        line-height: 26px;
+        padding: 0 10px;
+        display: inline-block;
+    }
+
+    .vi-DatePicker-monthOption,
+    .vi-DatePicker-yearOption {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        margin: 0 10px 10px 0;
+    }
+
+        .vi-DatePicker-monthOption:hover,
+        .vi-DatePicker-yearOption:hover {
+            outline: 1px solid transparent;
+        }
+
+    .vi-DatePicker-goToday {
+        box-sizing: border-box;
+        font-size: 12px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        right: 10px;
+        text-align: right;
+        top: 199px;
+        width: 210px;
+    }
+
+    .vi-DatePicker.is-pickingYears .vi-DatePicker-dayPicker,
+    .vi-DatePicker.is-pickingYears .vi-DatePicker-monthComponents {
+        display: block;
+    }
+
+    .vi-DatePicker.is-pickingYears .vi-DatePicker-monthPicker {
+        display: none;
+    }
+
+    .vi-DatePicker.is-pickingYears .vi-DatePicker-yearPicker {
+        display: block;
+    }
+}
+
+@media (max-width: 459px) {
+    .vi-DatePicker.is-pickingMonths .vi-DatePicker-dayPicker,
+    .vi-DatePicker.is-pickingMonths .vi-DatePicker-monthComponents {
+        display: none;
+    }
+
+    .vi-DatePicker.is-pickingMonths .vi-DatePicker-monthPicker {
+        display: block;
+    }
+}
+
+.vi-DetailsList {
+    position: relative;
+}
+
+    .vi-DetailsList.is-horizontalConstrained {
+        overflow-x: auto;
+        overflow-y: inherit;
+    }
+
+.vi-DetailsList-cell {
+    word-break: break-word;
+}
+
+.vi-DetailsHeader {
+    display: inline-block;
+    min-width: 100%;
+    height: 36px;
+    line-height: 36px;
+    white-space: nowrap;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 1px;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .vi-DetailsHeader.is-singleSelect {
+        padding-left: 40px;
+    }
+
+    .vi-DetailsHeader.is-resizingColumn .vi-DetailsHeader-sizerCover {
+        background: transparent;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        cursor: col-resize;
+    }
+
+.vi-DetailsHeader-cell.is-check .vi-Check-circle {
+    visibility: hidden;
+}
+
+.vi-DetailsHeader-cell.is-check:hover .vi-Check-circle,
+.vi-DetailsHeader.is-allSelected .vi-Check-circle {
+    visibility: visible;
+}
+
+.vi-DetailsHeader-cellWrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.vi-DetailsHeader-cellSizeWrapper {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 16px;
+}
+
+    .vi-DetailsHeader-cellSizeWrapper:last-child {
+        margin-right: 0;
+    }
+
+.vi-DetailsHeader-filterChevron.vi-Icon {
+    color: #a6a6a6;
+    padding-left: 4px;
+    vertical-align: middle;
+}
+
+.vi-DetailsHeader-cell {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 8px;
+    color: #a6a6a6;
+    border: 0;
+    background: none;
+    line-height: inherit;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    text-align: left;
+    height: 36px;
+    vertical-align: top;
+}
+
+    .vi-DetailsHeader-cell.is-check {
+        position: relative;
+        padding: 8px 10px;
+        margin: 0;
+    }
+
+    .vi-DetailsHeader-cell:focus {
+        outline: transparent;
+    }
+
+    .vi-DetailsHeader-cell.is-sortable {
+        color: #000000;
+        cursor: default;
+    }
+
+        .vi-DetailsHeader-cell.is-sortable:hover {
+            background-color: #eaeaea;
+        }
+
+    .vi-DetailsHeader-cell.is-filter {
+        position: absolute;
+        right: 0;
+        width: 20px;
+        top: 0;
+        bottom: 0;
+        padding: 0;
+        text-align: center;
+        color: #000000;
+    }
+
+        .vi-DetailsHeader-cell.is-filter:hover {
+            background-color: #eaeaea;
+        }
+
+        .vi-DetailsHeader-cell.is-filter::before {
+            content: '';
+            position: absolute;
+            border-left: 1px solid #a6a6a6;
+            top: 10px;
+            bottom: 10px;
+            left: 0;
+        }
+
+    .vi-DetailsHeader-cell.is-sizer {
+        position: absolute;
+        width: 16px;
+        cursor: col-resize;
+        bottom: 0;
+        top: 0;
+        height: inherit;
+        z-index: 99;
+    }
+
+    .vi-DetailsHeader-cell.is-sorted.is-sortable .vi-DetailsHeader-sortArrow {
+        display: inline;
+    }
+
+.vi-DetailsHeader-cellis-sortedDescending .vi-DetailsHeader-sortArrow {
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.vi-DetailsHeader-cell.is-resizing.is-sizer::after,
+.vi-DetailsHeader-cell.is-sizer:hover::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #eaeaea;
+    border: 1px solid #ffffff;
+}
+
+.vi-Fabric.is-focusVisible .vi-DetailsHeader-cell:focus::before,
+.vi-DetailsHeader-cell:focus::before {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #a6a6a6;
+}
+
+.vi-DetailsHeader-sortArrow.vi-Icon {
+    font-size: 12px;
+    margin-right: 4px;
+    display: none;
+    color: #a6a6a6;
+}
+
+.vi-DetailsRow {
+    position: relative;
+    display: inline-block;
+    min-width: 100%;
+    min-height: 36px;
+    vertical-align: top;
+    white-space: nowrap;
+    padding: 10px 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    box-sizing: border-box;
+}
+
+    .vi-DetailsRow:focus {
+        outline: transparent;
+    }
+
+    .vi-DetailsRow.vi-DetailsRow.is-selected {
+        background: #deecf9;
+    }
+
+    .vi-Fabric.is-stationary .vi-DetailsRow:hover,
+    .vi-DetailsRow:hover {
+        background: #eff6fc;
+    }
+
+    .vi-Fabric.is-stationary .vi-DetailsRow.is-selected:hover,
+    .vi-DetailsRow.is-selected:hover {
+        background: #b3d6f2;
+    }
+
+.vi-DetailsRow-cell {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 8px;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+    margin-right: 16px;
+}
+
+    .vi-DetailsRow-cell.is-clipped {
+        overflow: hidden;
+    }
+
+    .vi-DetailsRow-cell:last-child {
+        margin-right: 0;
+    }
+
+.vi-DetailsRow-cellIcon {
+    display: inline-block;
+    margin-right: 6px;
+    position: relative;
+    bottom: -2px;
+}
+
+.vi-DetailsRow-check {
+    display: inline-block;
+    cursor: default;
+    padding: 10px;
+    margin: -10px 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    background: none;
+    border: 0;
+    visibility: hidden;
+}
+
+    .vi-DetailsRow-check:focus {
+        outline: transparent;
+    }
+
+.vi-Fabric.is-stationary .vi-DetailsRow:hover .vi-DetailsRow-check,
+.vi-DetailsRow:hover .vi-DetailsRow-check,
+.vi-DetailsRow.is-selected .vi-DetailsRow-check {
+    visibility: visible;
+}
+
+.vi-Fabric.is-focusVisible .vi-DetailsRow:focus .vi-DetailsRow-focusBox,
+.vi-DetailsRow:focus .vi-DetailsRow-focusBox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 1px solid #a6a6a6;
+}
+
+.vi-DetailsRow-cellMeasurer {
+    position: absolute;
+    visibility: hidden;
+    white-space: nowrap;
+    top: -1000000000;
+}
+
+.vi-Check {
+    display: inline-block;
+    cursor: default;
+    line-height: 0;
+    vertical-align: top;
+}
+
+    .vi-Check.is-checked .vi-Check-circle {
+        fill: #0078d7;
+        stroke: #ffffff;
+        stroke-width: 1px;
+    }
+
+    .vi-Check.is-checked .vi-Check-check {
+        stroke: #ffffff;
+    }
+
+.vi-Check-circle {
+    fill: #ffffff;
+    stroke: #c8c8c8;
+}
+
+.vi-Check-check {
+    stroke: #c8c8c8;
+}
+
+.vi-Dialog {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    display: none;
+    height: auto;
+    min-width: 220px;
+    max-width: 340px;
+    padding: 28px 24px;
+    z-index: 10;
+    position: fixed;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+    .vi-Dialog.is-open {
+        display: block;
+    }
+
+.vi-Dialog-title {
+    font-size: 21px;
+    font-weight: 100;
+    margin-bottom: 24px;
+}
+
+.vi-Dialog-content {
+    position: relative;
+}
+
+.vi-Dialog-subText {
+    color: #333333;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.vi-Dialog-actions {
+    margin-top: 24px;
+    text-align: right;
+}
+
+.vi-Dialog--multiline .vi-Dialog-title {
+    font-size: 28px;
+}
+
+.vi-Dialog.vi-Dialog--lgHeader .vi-Dialog-title {
+    background-color: #0078d7;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 100;
+    padding: 28px 24px;
+    margin-top: -28px;
+    margin-left: -24px;
+    margin-right: -24px;
+}
+
+.vi-Dialog-buttonClose {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 4px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 10;
+}
+
+    .vi-Dialog-buttonClose .vi-Icon.vi-Icon--Cancel {
+        color: #666666;
+        font-size: 16px;
+    }
+
+.vi-Button.vi-Button--compound:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.vi-Dialog.vi-Dialog--close:not(.vi-Dialog--lgHeader) .vi-Dialog-title {
+    margin-right: 20px;
+}
+
+.vi-Dialog.vi-Dialog--close:not(.vi-Dialog--lgHeader) .vi-Dialog-button.vi-Dialog-buttonClose {
+    display: block;
+}
+
+@media (min-width: 480px) {
+    .vi-Dialog-main {
+        width: auto;
+        min-width: 288px;
+        max-width: 340px;
+    }
+}
+
+.vi-Dropdown {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    position: relative;
+    outline: 0;
+}
+.vi-Table .vi-Dropdown {
+    margin-bottom: 0;
+}
+
+    .vi-Dropdown:hover .vi-Dropdown-title,
+    .vi-Dropdown:hover .vi-Dropdown-caretDown,
+    .vi-Dropdown:focus .vi-Dropdown-title,
+    .vi-Dropdown:focus .vi-Dropdown-caretDown,
+    .vi-Dropdown:active .vi-Dropdown-title,
+    .vi-Dropdown:active .vi-Dropdown-caretDown {
+        color: #000000;
+    }
+
+    .vi-Dropdown:hover .vi-Dropdown-title,
+    .vi-Dropdown:active .vi-Dropdown-title {
+        border-color: #767676;
+    }
+
+    .vi-Dropdown:focus .vi-Dropdown-title {
+        border-color: #0078d7;
+    }
+
+    .vi-Dropdown .vi-Label {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    .vi-Dropdown.is-disabled .vi-Dropdown-title {
+        background-color: #f4f4f4;
+        border-color: #f4f4f4;
+        color: #a6a6a6;
+        cursor: default;
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Dropdown.is-disabled .vi-Dropdown-title {
+        border-color: #00ff00;
+        color: #00ff00;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Dropdown.is-disabled .vi-Dropdown-title {
+        border-color: #600000;
+        color: #600000;
+    }
+}
+
+.vi-Dropdown.is-disabled .vi-Dropdown-caretDown {
+    color: #a6a6a6;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Dropdown.is-disabled .vi-Dropdown-caretDown {
+        color: #00ff00;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Dropdown.is-disabled .vi-Dropdown-caretDown {
+        color: #600000;
+    }
+}
+
+.vi-Dropdown.is-open .vi-Dropdown-items {
+    display: block;
+    position: absolute;
+}
+
+.vi-Panel .vi-Dropdown-items {
+    box-shadow: none;
+    overflow-y: auto;
+    padding-top: 4px;
+    max-height: 100%;
+}
+
+    .vi-Panel .vi-Dropdown-items .vi-Dropdown-item {
+        padding: 7px 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .vi-Panel .vi-Dropdown-items::before {
+        content: none;
+        border: 0;
+    }
+
+.vi-Dropdown-select {
+    display: none;
+}
+
+.vi-Dropdown-caretDown {
+    color: #212121;
+    font-size: 12px;
+    position: absolute;
+    right: 13px;
+    bottom: 9px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.vi-Dropdown-title {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    background: #ffffff;
+    border: 1px solid #c8c8c8;
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    padding: 5px 32px 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .vi-Dropdown-title.vi-Dropdown-truncator {
+        height: auto;
+        display: block;
+        position: absolute;
+        visibility: hidden;
+    }
+
+.vi-Dropdown-items {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    z-index: 400;
+    overflow-y: scroll;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    max-width: 100%;
+}
+
+    .vi-Dropdown-items::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid #eaeaea;
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Dropdown-items {
+        border: 1px solid #ffffff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Dropdown-items {
+        border: 1px solid #000000;
+    }
+}
+
+.vi-Dropdown-item {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 36px;
+    padding: 7px 10px;
+    position: relative;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Dropdown-item {
+        border-color: #000000;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Dropdown-item {
+        border-color: #ffffff;
+    }
+}
+
+.vi-Dropdown-item:hover {
+    background-color: #eaeaea;
+    color: #000000;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Dropdown-item:hover {
+        background-color: #1aebff;
+        border-color: #1aebff;
+        color: #000000;
+    }
+
+        .vi-Dropdown-item:hover:focus {
+            border-color: #000000;
+        }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Dropdown-item:hover {
+        background-color: #37006e;
+        border-color: #37006e;
+        color: #ffffff;
+    }
+}
+
+.vi-Dropdown-item:active {
+    background-color: #eaeaea;
+    border-color: #0078d7;
+    color: #000000;
+}
+
+.vi-Dropdown-item.is-disabled {
+    background: #ffffff;
+    color: #a6a6a6;
+    cursor: default;
+}
+
+.vi-Dropdown-item.is-selected,
+.vi-Dropdown-item.vi-Dropdown-item--selected {
+    background-color: #b3d6f2;
+    color: #000000;
+}
+
+    .vi-Dropdown-item.is-selected:hover,
+    .vi-Dropdown-item.vi-Dropdown-item--selected:hover {
+        background-color: #b3d6f2;
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Dropdown-item.is-selected,
+    .vi-Dropdown-item.vi-Dropdown-item--selected {
+        background-color: #1aebff;
+        border-color: #1aebff;
+        color: #000000;
+    }
+
+        .vi-Dropdown-item.is-selected:focus,
+        .vi-Dropdown-item.vi-Dropdown-item--selected:focus {
+            border-color: #000000;
+        }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Dropdown-item.is-selected,
+    .vi-Dropdown-item.vi-Dropdown-item--selected {
+        background-color: #37006e;
+        border-color: #37006e;
+        color: #ffffff;
+    }
+}
+
+.vi-FacePile {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    height: 32px;
+    width: auto;
+}
+
+    .vi-FacePile .vi-FacePile-personaCardHost {
+        display: none;
+    }
+
+.vi-FacePile-addButton {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    text-align: center;
+    float: left;
+    padding: 0;
+    margin-right: 4px;
+    outline: transparent;
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+    .vi-FacePile-addButton .vi-Persona-presence,
+    .vi-FacePile-addButton .vi-Persona-details {
+        display: none;
+    }
+
+    .vi-FacePile-addButton.vi-FacePile-addButton--addPerson {
+        background-color: #0078d7;
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+        .vi-FacePile-addButton.vi-FacePile-addButton--addPerson:hover,
+        .vi-FacePile-addButton.vi-FacePile-addButton--addPerson:focus {
+            background-color: #005a9e;
+        }
+
+        .vi-FacePile-addButton.vi-FacePile-addButton--addPerson:active {
+            background-color: #004578;
+        }
+
+        .vi-FacePile-addButton.vi-FacePile-addButton--addPerson:disabled {
+            background-color: #c8c8c8;
+        }
+
+    .vi-FacePile-addButton.vi-FacePile-addButton--overflow {
+        background-color: #eaeaea;
+        color: #666666;
+        display: none;
+    }
+
+        .vi-FacePile-addButton.vi-FacePile-addButton--overflow.is-active {
+            display: block;
+        }
+
+        .vi-FacePile-addButton.vi-FacePile-addButton--overflow:hover {
+            color: #212121;
+        }
+
+        .vi-FacePile-addButton.vi-FacePile-addButton--overflow:disabled {
+            color: #c8c8c8;
+        }
+
+.vi-FacePile-addPersonIcon {
+    position: relative;
+    top: -1px;
+}
+
+.vi-FacePile-overflowText {
+    font-size: 14px;
+}
+
+.vi-FacePile-panel.vi-FacePile-panel--overflow .vi-Panel-headerText,
+.vi-FacePile-panel.vi-FacePile-panel--overflow .vi-PeoplePicker-searchBox,
+.vi-FacePile-panel.vi-FacePile-panel--overflow .vi-PeoplePicker-results,
+.vi-FacePile-panel.vi-FacePile-panel--overflow .vi-PeoplePicker-resultAction {
+    display: none;
+}
+
+.vi-FacePile-panel.vi-FacePile-panel--overflow .vi-PeoplePicker-selectedHeader {
+    font-weight: 100;
+    font-size: 21px;
+    color: #333333;
+    line-height: 82px;
+    height: 74px;
+    text-transform: none;
+}
+
+.vi-Label {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 12px;
+    font-weight: 400;
+    box-sizing: border-box;
+    display: block;
+    padding: 5px 0;
+}
+
+    .vi-Label.is-required::after {
+        content: ' *';
+        color: #a80000;
+    }
+
+    .vi-Label.is-disabled {
+        color: #a6a6a6;
+    }
+
+.vi-Link {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-weight: 400;
+    color: #0078d7;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+    .vi-Link:hover,
+    .vi-Link:focus {
+        color: #004578;
+    }
+
+    .vi-Link:active {
+        color: #0078d7;
+    }
+
+.vi-List {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    list-style-type: none;
+}
+
+.vi-ListItem {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    *zoom: 1;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 9px 28px 3px;
+    position: relative;
+    display: block;
+}
+
+    .vi-ListItem::before,
+    .vi-ListItem::after {
+        display: table;
+        content: '';
+        line-height: 0;
+    }
+
+    .vi-ListItem::after {
+        clear: both;
+    }
+
+.vi-ListItem-primaryText,
+.vi-ListItem-secondaryText,
+.vi-ListItem-tertiaryText {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+.vi-ListItem-primaryText {
+    color: #212121;
+    font-weight: 300;
+    font-size: 21px;
+    padding-right: 80px;
+    position: relative;
+    top: -4px;
+}
+
+.vi-ListItem-secondaryText {
+    color: #333333;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    position: relative;
+    top: -7px;
+    padding-right: 30px;
+}
+
+.vi-ListItem-tertiaryText {
+    color: #767676;
+    font-weight: 300;
+    font-size: 14px;
+    position: relative;
+    top: -9px;
+    margin-bottom: -4px;
+    padding-right: 30px;
+}
+
+.vi-ListItem-metaText {
+    color: #333333;
+    font-weight: 300;
+    font-size: 11px;
+    position: absolute;
+    right: 30px;
+    top: 39px;
+}
+
+.vi-ListItem-image {
+    float: left;
+    height: 70px;
+    margin-left: -8px;
+    margin-right: 10px;
+    width: 70px;
+    background-color: #333333;
+}
+
+.vi-ListItem-selectionTarget {
+    display: none;
+}
+
+.vi-ListItem-actions {
+    max-width: 80px;
+    position: absolute;
+    right: 30px;
+    text-align: right;
+    top: 10px;
+}
+
+.vi-ListItem-action {
+    color: #a6a6a6;
+    display: inline-block;
+    font-size: 15px;
+    position: relative;
+    text-align: center;
+    top: 3px;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+
+    .vi-ListItem-action .vi-Icon {
+        vertical-align: top;
+    }
+
+    .vi-ListItem-action:hover {
+        color: #666666;
+        outline: 1px solid transparent;
+    }
+
+.vi-ListItem.is-unread {
+    border-left: 3px solid #0078d7;
+    padding-left: 27px;
+}
+
+    .vi-ListItem.is-unread .vi-ListItem-secondaryText,
+    .vi-ListItem.is-unread .vi-ListItem-metaText {
+        color: #0078d7;
+        font-weight: 600;
+    }
+
+.vi-ListItem.is-unseen::after {
+    border-right: 10px solid transparent;
+    border-top: 10px solid #0078d7;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.vi-ListItem.is-selectable .vi-ListItem-selectionTarget {
+    display: block;
+    height: 20px;
+    left: 6px;
+    position: absolute;
+    top: 13px;
+    width: 20px;
+}
+
+.vi-ListItem.is-selectable .vi-ListItem-image {
+    margin-left: 0;
+}
+
+.vi-ListItem.is-selectable:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+    outline: 1px solid transparent;
+}
+
+    .vi-ListItem.is-selectable:hover::before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-family: 'FabricMDL2Icons';
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        position: absolute;
+        top: 14px;
+        left: 7px;
+        height: 15px;
+        width: 15px;
+        border: 1px solid #767676;
+    }
+
+.vi-ListItem.is-selected::before {
+    border: 1px solid transparent;
+}
+
+.vi-ListItem.is-selected::before,
+.vi-ListItem.is-selected:hover::before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: 'FabricMDL2Icons';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    content: '\e73A';
+    font-size: 17px;
+    color: #767676;
+    position: absolute;
+    top: 23px;
+    left: 7px;
+    border: 0;
+}
+
+.vi-ListItem.is-selected:hover {
+    background-color: #b3d6f2;
+    outline: 1px solid transparent;
+}
+
+.vi-ListItem.vi-ListItem--document {
+    padding: 0;
+}
+
+    .vi-ListItem.vi-ListItem--document .vi-ListItem-itemIcon {
+        width: 70px;
+        height: 70px;
+        float: left;
+        text-align: center;
+    }
+
+        .vi-ListItem.vi-ListItem--document .vi-ListItem-itemIcon .vi-Icon {
+            font-size: 38px;
+            line-height: 70px;
+            color: #666666;
+        }
+
+    .vi-ListItem.vi-ListItem--document .vi-ListItem-primaryText {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+        padding-top: 15px;
+        padding-right: 0;
+        position: static;
+    }
+
+    .vi-ListItem.vi-ListItem--document .vi-ListItem-secondaryText {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #666666;
+        font-weight: 400;
+        font-size: 11px;
+        padding-top: 6px;
+    }
+
+.vi-MessageBanner {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #333333;
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    border-bottom: 1px solid #767676;
+    background-color: #eff6fc;
+    min-width: 320px;
+    width: 100%;
+    height: 52px;
+    text-align: center;
+    overflow: hidden;
+    animation-name: fadeIn, slideDownIn20;
+    -webkit-animation-duration: 0.367s;
+    -moz-animation-duration: 0.367s;
+    -ms-animation-duration: 0.367s;
+    -o-animation-duration: 0.367s;
+    animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+    animation-fill-mode: both;
+}
+
+    .vi-MessageBanner .vi-Icon {
+        font-size: 16px;
+    }
+
+    .vi-MessageBanner.hide {
+        animation-name: fadeOut, slideUpOut20;
+        -webkit-animation-duration: 0.167s;
+        -moz-animation-duration: 0.167s;
+        -ms-animation-duration: 0.167s;
+        -o-animation-duration: 0.167s;
+        animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+        animation-fill-mode: both;
+    }
+
+    .vi-MessageBanner.is-hidden {
+        display: none;
+    }
+
+.vi-MessageBanner-expand,
+.vi-MessageBanner-close {
+    height: 52px;
+    width: 40px;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+
+.vi-MessageBanner-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 52px;
+    color: #666666;
+}
+
+.vi-MessageBanner-text {
+    display: inline-block;
+    padding: 18px 0;
+    margin-left: 0;
+    max-width: 770px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.vi-MessageBanner-expand {
+    display: none;
+    vertical-align: top;
+}
+
+    .vi-MessageBanner-expand.is-visible {
+        display: inline-block;
+    }
+
+.vi-MessageBanner-action {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-right: 36px;
+}
+
+    .vi-MessageBanner-action .vi-Button {
+        color: #ffffff;
+    }
+
+.vi-MessageBanner-clipper {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.vi-MessageBanner.is-expanded {
+    height: auto;
+}
+
+    .vi-MessageBanner.is-expanded .vi-MessageBanner-clipper {
+        white-space: normal;
+    }
+
+@media screen and (max-width: 479px) {
+    .vi-MessageBanner-action {
+        margin: 0;
+        display: block;
+        text-align: right;
+        padding: 0 10px 10px 0;
+    }
+
+    .vi-MessageBanner-text {
+        margin-left: -25px;
+        padding: 18px 0 10px;
+        min-width: 240px;
+    }
+
+    .vi-MessageBanner-expand {
+        display: inline-block;
+        padding: 0;
+        margin-left: -5px;
+        width: 20px;
+    }
+
+        .vi-MessageBanner-expand .vi-Icon {
+            color: #0078d7;
+        }
+}
+
+.vi-ContextualHost {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    z-index: 10;
+    margin: 16px auto;
+    position: relative;
+    min-width: 10px;
+    display: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+    .vi-ContextualHost.is-positioned {
+        position: absolute;
+        margin: 0;
+    }
+
+    .vi-ContextualHost.is-open {
+        display: inline-block;
+    }
+
+.vi-ContextualHost-beak {
+    box-shadow: 0 0 15px -5px #3c3c3c;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    top: -6px;
+    display: none;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 0;
+    outline: 1px solid transparent;
+}
+
+.vi-ContextualHost.vi-ContextualHost--arrowLeft .vi-ContextualHost-beak,
+.vi-ContextualHost.vi-ContextualHost--arrowRight .vi-ContextualHost-beak {
+    top: 40px;
+    display: none;
+}
+
+.vi-ContextualHost.vi-ContextualHost--arrowLeft .vi-ContextualHost-beak {
+    left: -10px;
+}
+
+.vi-ContextualHost.vi-ContextualHost--arrowRight .vi-ContextualHost-beak {
+    right: -10px;
+}
+
+.vi-ContextualHost.vi-ContextualHost--arrowTop .vi-ContextualHost-beak {
+    display: block;
+    top: -10px;
+}
+
+.vi-ContextualHost.vi-ContextualHost--arrowBottom .vi-ContextualHost-beak {
+    display: block;
+    bottom: -10px;
+}
+
+.vi-ContextualHost-main {
+    position: relative;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    z-index: 5;
+    min-height: 10px;
+}
+
+.vi-ContextualHost-close {
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    color: #666666;
+    z-index: 10;
+}
+
+.vi-ContextualHost.vi-ContextualHost--close .vi-ContextualHost-title {
+    margin-right: 20px;
+}
+
+.vi-ContextualHost.vi-ContextualHost--primaryArrow .vi-ContextualHost-beak {
+    background-color: #0078d7;
+}
+
+@media (min-width: 480px) {
+    .vi-ContextualHost {
+        margin: 16px;
+    }
+
+        .vi-ContextualHost.is-positioned {
+            margin: 0;
+        }
+
+        .vi-ContextualHost.vi-ContextualHost--arrowRight .vi-ContextualHost-beak,
+        .vi-ContextualHost.vi-ContextualHost--arrowLeft .vi-ContextualHost-beak {
+            display: block;
+        }
+}
+
+.vi-MessageBar {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 8px;
+    display: table;
+    background-color: #f4f4f4;
+}
+
+    .vi-MessageBar .vi-Link {
+        font-size: 12px;
+    }
+
+.vi-MessageBar-icon,
+.vi-MessageBar-text {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.vi-MessageBar-icon {
+    padding-right: 8px;
+    font-size: 16px;
+    color: #767676;
+}
+
+.vi-MessageBar-text {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.vi-MessageBar.vi-MessageBar--warning {
+    background-color: #fff4ce;
+}
+
+.vi-MessageBar.vi-MessageBar--severeWarning {
+    background-color: #fed9cc;
+}
+
+    .vi-MessageBar.vi-MessageBar--severeWarning .vi-MessageBar-icon {
+        color: #d83b01;
+    }
+
+.vi-MessageBar.vi-MessageBar--error {
+    background-color: #fde7e9;
+}
+
+    .vi-MessageBar.vi-MessageBar--error .vi-MessageBar-icon {
+        color: #a80000;
+    }
+
+.vi-MessageBar.vi-MessageBar--blocked {
+    background-color: #fde7e9;
+}
+
+    .vi-MessageBar.vi-MessageBar--blocked .vi-MessageBar-icon {
+        color: #a80000;
+    }
+
+.vi-MessageBar.vi-MessageBar--success {
+    background-color: #dff6dd;
+}
+
+    .vi-MessageBar.vi-MessageBar--success .vi-MessageBar-icon {
+        color: #107c10;
+    }
+
+.vi-OrgChart {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.vi-OrgChart-groupTitle {
+    color: #666666;
+    line-height: 1;
+}
+
+.vi-OrgChart-list {
+    padding: 0;
+    margin: 12px 0 16px;
+}
+
+.vi-OrgChart-listItem {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.vi-OrgChart-listItemBtn {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background: none;
+    border: 0;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.vi-Overlay {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    display: none;
+}
+
+    .vi-Overlay.is-visible {
+        display: block;
+    }
+
+.vi-Overlay--dark {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.vi-u-overflowHidden {
+    overflow: hidden;
+}
+
+.vi-Panel {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 340px;
+    box-shadow: -30px 0 30px -30px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: none;
+    height: 100%;
+}
+
+    .vi-Panel.animate-in {
+        animation-name: fadeIn, slideLeftIn40;
+        -webkit-animation-duration: 0.367s;
+        -moz-animation-duration: 0.367s;
+        -ms-animation-duration: 0.367s;
+        -o-animation-duration: 0.367s;
+        animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+        animation-fill-mode: both;
+    }
+
+    .vi-Panel.animate-out {
+        animation-name: fadeOut, slideRightOut40;
+        -webkit-animation-duration: 0.167s;
+        -moz-animation-duration: 0.167s;
+        -ms-animation-duration: 0.167s;
+        -o-animation-duration: 0.167s;
+        animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+        animation-fill-mode: both;
+    }
+
+    .vi-Panel.is-open {
+        display: block;
+    }
+
+    .vi-Panel .vi-CommandBar {
+        padding-right: 0;
+        padding-left: 8px;
+    }
+
+    .vi-Panel.vi-Panel--md {
+        max-width: 340px;
+    }
+
+    .vi-Panel.vi-Panel--lg {
+        max-width: 644px;
+    }
+
+    .vi-Panel.vi-Panel--xl {
+        max-width: 940px;
+    }
+
+    .vi-Panel.vi-Panel--xxl {
+        max-width: 1192px;
+    }
+
+.vi-Panel--left {
+    box-shadow: -30px 0 30px 30px rgba(0, 0, 0, 0.2);
+    left: 0;
+    right: auto;
+}
+
+    .vi-Panel--left.animate-in {
+        animation-name: fadeIn, slideRightIn40;
+        -webkit-animation-duration: 0.367s;
+        -moz-animation-duration: 0.367s;
+        -ms-animation-duration: 0.367s;
+        -o-animation-duration: 0.367s;
+        animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+        animation-fill-mode: both;
+    }
+
+    .vi-Panel--left.animate-out {
+        animation-name: fadeOut, slideLeftOut40;
+        -webkit-animation-duration: 0.167s;
+        -moz-animation-duration: 0.167s;
+        -ms-animation-duration: 0.167s;
+        -o-animation-duration: 0.167s;
+        animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+        animation-fill-mode: both;
+    }
+
+.vi-Panel-closeButton {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 6px;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    outline: 0;
+    padding: 0;
+    color: #666666;
+    font-size: 16px;
+}
+
+    .vi-Panel-closeButton:hover {
+        color: #333333;
+    }
+
+    .vi-Panel-closeButton .vi-Icon--Cancel {
+        margin-top: 2px;
+    }
+
+@media (max-width: 639px) {
+    .vi-Panel-closeButton {
+        font-size: 20px;
+        line-height: 20px;
+        height: 44px;
+        right: 4px;
+    }
+}
+
+.vi-Panel-contentInner {
+    margin-top: 40px;
+    padding: 0 16px 20px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+@media (min-width: 640px) {
+    .vi-Panel-contentInner {
+        padding: 0 32px 20px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .vi-Panel-contentInner {
+        padding: 0 40px 20px;
+    }
+}
+
+.vi-Panel-headerText {
+    font-weight: 100;
+    font-size: 21px;
+    color: #333333;
+    margin: 10px 0;
+    padding: 4px 0;
+    line-height: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .vi-Panel-headerText {
+        margin-top: 30px;
+    }
+}
+
+.vi-PanelHost {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+    .vi-PanelHost .vi-Overlay {
+        cursor: pointer;
+    }
+
+.vi-PeoplePicker {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 14px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.vi-PeoplePicker-searchBox {
+    border-bottom: 1px solid #c8c8c8;
+    cursor: text;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+    .vi-PeoplePicker-searchBox:hover {
+        border-color: #767676;
+    }
+
+    .vi-PeoplePicker-searchBox.is-active,
+    .vi-PeoplePicker-searchBox:focus {
+        border-color: #0078d7;
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-PeoplePicker-searchBox:hover,
+    .vi-PeoplePicker-searchBox:focus {
+        border-color: #1aebff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-PeoplePicker-searchBox:hover,
+    .vi-PeoplePicker-searchBox:focus {
+        border-color: #37006e;
+    }
+}
+
+.vi-PeoplePicker-searchBox::-webkit-input-placeholder {
+    color: #666666;
+}
+
+.vi-PeoplePicker-searchBox::-moz-placeholder {
+    color: #666666;
+}
+
+.vi-PeoplePicker-searchBox:-moz-placeholder {
+    color: #666666;
+}
+
+.vi-PeoplePicker-searchBox:-ms-input-placeholder {
+    color: #666666;
+}
+
+.vi-PeoplePicker-searchBox .vi-TextField.vi-TextField--textFieldUnderlined {
+    border: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    width: 100%;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+    .vi-PeoplePicker-searchBox .vi-TextField.vi-TextField--textFieldUnderlined .vi-TextField-field {
+        min-height: 40px;
+        border: 0;
+    }
+
+.vi-PeoplePicker.is-active .vi-PeoplePicker-searchBox .vi-TextField-field {
+    border-color: #0078d7;
+}
+
+.vi-PeoplePicker-persona {
+    cursor: pointer;
+}
+
+    .vi-PeoplePicker-persona.has-error .vi-Persona-primaryText {
+        color: #a80000;
+    }
+
+.vi-PeoplePicker-personaRemove {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    color: #666666;
+    display: inline-block;
+    text-align: center;
+    height: 32px;
+    width: 32px;
+}
+
+    .vi-PeoplePicker-personaRemove:hover {
+        background-color: #eaeaea;
+        color: #333333;
+        cursor: pointer;
+    }
+
+    .vi-PeoplePicker-personaRemove:focus {
+        background-color: #eaeaea;
+        color: #333333;
+        border: 1px solid #0078d7;
+        outline: none;
+    }
+
+.vi-PeoplePicker-results {
+    background-color: #ffffff;
+    border: 1px solid #c8c8c8;
+    margin-bottom: -1px;
+    padding-top: 9px;
+    width: 100%;
+    padding-left: 0;
+    box-sizing: border-box;
+}
+
+.vi-PeoplePicker.is-active .vi-PeoplePicker-results {
+    display: block;
+    opacity: 1;
+}
+
+.vi-PeoplePicker-resultGroup {
+    border-top: 1px solid #eaeaea;
+}
+
+    .vi-PeoplePicker-resultGroup:first-child {
+        border-top: 0;
+    }
+
+.vi-PeoplePicker-resultGroupTitle {
+    color: #0078d7;
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    padding-left: 16px;
+}
+
+.vi-PeoplePicker-resultList {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: -1px;
+    list-style-type: none;
+}
+
+.vi-PeoplePicker-result {
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    cursor: pointer;
+    outline: 0;
+}
+
+    .vi-PeoplePicker-result:hover,
+    .vi-PeoplePicker-result:focus {
+        background-color: #eaeaea;
+    }
+
+    .vi-PeoplePicker-result:focus {
+        box-shadow: 0 0 0 1px #0078d7 inset;
+    }
+
+    .vi-PeoplePicker-result.is-selected {
+        background-color: #b3d6f2;
+    }
+
+        .vi-PeoplePicker-result.is-selected .vi-PeoplePicker-resultAction:hover {
+            background-color: #69afe5;
+        }
+
+        .vi-PeoplePicker-result.is-selected .vi-PeoplePicker-resultAction:active {
+            background-color: #69afe5;
+        }
+
+.vi-PeoplePicker-resultBtn,
+.vi-PeoplePicker-peopleListBtn {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    height: 34px;
+    width: 100%;
+    background: none;
+    border: 0;
+    text-align: left;
+    margin: 0 0 10px;
+    padding: 0 0 0 9px;
+}
+
+@media (min-width: 480px) {
+    .vi-PeoplePicker-resultBtn,
+    .vi-PeoplePicker-peopleListBtn {
+        height: 48px;
+    }
+}
+
+.vi-PeoplePicker-resultBtn:hover,
+.vi-PeoplePicker-peopleListBtn:hover {
+    background-color: #eaeaea;
+    outline: 1px solid transparent;
+}
+
+.vi-PeoplePicker-resultBtn:focus,
+.vi-PeoplePicker-peopleListBtn:focus {
+    outline: 1;
+}
+
+.vi-PeoplePicker-resultBtn.vi-PeoplePicker-resultBtn--compact,
+.vi-PeoplePicker-peopleListBtn.vi-PeoplePicker-resultBtn--compact {
+    height: 32px;
+}
+
+.vi-PeoplePicker-peopleListBtn {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+    .vi-PeoplePicker-peopleListBtn:hover {
+        background-color: transparent;
+    }
+
+.vi-PeoplePicker-resultAction {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    transition: background-color 0.367s cubic-bezier(0.1, 0.9, 0.2, 1);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    text-align: center;
+}
+
+    .vi-PeoplePicker-resultAction .vi-Icon {
+        color: #666666;
+        font-size: 15px;
+    }
+
+    .vi-PeoplePicker-resultAction:hover {
+        background-color: #c8c8c8;
+        outline: 1px solid transparent;
+    }
+
+    .vi-PeoplePicker-resultAction:active {
+        background-color: #a6a6a6;
+    }
+
+.vi-PeoplePicker-resultAdditionalContent {
+    display: none;
+}
+
+.vi-PeoplePicker-result.is-expanded {
+    background-color: #f4f4f4;
+    margin-bottom: 11px;
+}
+
+    .vi-PeoplePicker-result.is-expanded .vi-PeoplePicker-resultAction .vi-Icon {
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .vi-PeoplePicker-result.is-expanded .vi-PeoplePicker-resultAdditionalContent {
+        display: block;
+    }
+
+.vi-PeoplePicker-searchMore {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+    width: 100%;
+}
+
+    .vi-PeoplePicker-searchMore:hover {
+        background-color: #f4f4f4;
+    }
+
+.vi-PeoplePicker-searchMoreIcon {
+    font-size: 21px;
+    height: 40px;
+    left: 16px;
+    line-height: 40px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 40px;
+}
+
+.vi-PeoplePicker-searchMoreText {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    height: 40px;
+    left: 64px;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+}
+
+.vi-PeoplePicker-results.vi-PeoplePicker-results--compact .vi-PeoplePicker-resultAction {
+    height: 32px;
+    width: 32px;
+}
+
+.vi-PeoplePicker-results.vi-PeoplePicker-results--compact .vi-PeoplePicker-resultGroups {
+    max-height: 209px;
+}
+
+.vi-PeoplePicker.vi-PeoplePicker--facePile.is-searching .vi-PeoplePicker-results {
+    border-bottom: 0;
+    padding: 20px 0 0;
+}
+
+.vi-PeoplePicker.vi-PeoplePicker--facePile.is-searching .vi-PeoplePicker-peopleListHeader {
+    display: none;
+}
+
+.vi-PeoplePicker.vi-PeoplePicker--facePile .vi-PersonaCard {
+    display: none;
+    position: absolute;
+    height: 200px;
+}
+
+    .vi-PeoplePicker.vi-PeoplePicker--facePile .vi-PersonaCard.is-active {
+        display: block;
+    }
+
+.vi-PeoplePicker.vi-PeoplePicker--facePile .vi-Persona.vi-Persona--selectable {
+    padding: 0;
+}
+
+.vi-PeoplePicker-results.vi-PeoplePicker-results--facePile {
+    position: relative;
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+    max-width: 100%;
+    border-bottom: 1px solid #eaeaea;
+}
+
+@media (max-width: 479px) {
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-Persona-placeholder,
+    .vi-PeoplePicker-selectedPeople .vi-Persona-placeholder {
+        font-size: 28px;
+        top: 6px;
+    }
+
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-Persona-initials,
+    .vi-PeoplePicker-selectedPeople .vi-Persona-initials {
+        font-size: 12px;
+        line-height: 32px;
+    }
+
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-Persona-presence,
+    .vi-PeoplePicker-selectedPeople .vi-Persona-presence {
+        left: 19px;
+    }
+
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-Persona-details,
+    .vi-PeoplePicker-selectedPeople .vi-Persona-details {
+        padding-left: 8px;
+    }
+
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-Persona-primaryText,
+    .vi-PeoplePicker-selectedPeople .vi-Persona-primaryText {
+        font-size: 14px;
+        padding-top: 3px;
+    }
+
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-Persona-secondaryText,
+    .vi-PeoplePicker-selectedPeople .vi-Persona-secondaryText {
+        display: none;
+    }
+}
+
+@media (min-width: 480px) {
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-Persona .vi-Persona-secondaryText,
+    .vi-PeoplePicker-selectedPeople .vi-Persona .vi-Persona-secondaryText {
+        display: block;
+    }
+}
+
+@media (min-width: 480px) {
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-PeoplePicker-resultBtn,
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-PeoplePicker-peopleListBtn,
+    .vi-PeoplePicker-selectedPeople .vi-PeoplePicker-resultBtn,
+    .vi-PeoplePicker-selectedPeople .vi-PeoplePicker-peopleListBtn {
+        height: 40px;
+    }
+}
+
+@media (min-width: 480px) {
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-PeoplePicker-resultAction,
+    .vi-PeoplePicker-selectedPeople .vi-PeoplePicker-resultAction {
+        height: 40px;
+    }
+}
+
+.vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-PeoplePicker-selected,
+.vi-PeoplePicker-selectedPeople .vi-PeoplePicker-selected {
+    margin-bottom: 20px;
+    display: none;
+}
+
+    .vi-PeoplePicker-results.vi-PeoplePicker-results--facePile .vi-PeoplePicker-selected.is-active,
+    .vi-PeoplePicker-selectedPeople .vi-PeoplePicker-selected.is-active {
+        display: block;
+    }
+
+.vi-PeoplePicker-selectedHeader,
+.vi-PeoplePicker-peopleListHeader {
+    color: #0078d7;
+    font-size: 12px;
+    font-weight: 400;
+    height: 50px;
+    line-height: 50px;
+}
+
+.vi-PeoplePicker-selectedPeople,
+.vi-PeoplePicker-peopleList {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    list-style: none;
+}
+
+.vi-PeoplePicker-selectedPerson {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.vi-PeoplePicker-peopleListItem {
+    margin-bottom: 6px;
+    position: relative;
+}
+
+.vi-Persona {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    width: 100%;
+    height: 48px;
+    display: table;
+    table-layout: fixed;
+    border-collapse: separate;
+}
+
+    .vi-Persona .vi-ContextualHost {
+        display: none;
+    }
+
+.vi-Persona-imageArea {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    max-width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    z-index: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Persona-imageArea {
+        border: 1px solid #ffffff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Persona-imageArea {
+        border: 1px solid #000000;
+    }
+}
+
+.vi-Persona-placeholder {
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+    left: 0;
+    font-size: 47px;
+    top: 9px;
+    z-index: 5;
+}
+
+.vi-Persona-initials {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 48px;
+}
+
+    .vi-Persona-initials.vi-Persona-initials--blueLight {
+        background-color: #00bcf2;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--blue {
+        background-color: #0078d7;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--blueDark {
+        background-color: #002050;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--teal {
+        background-color: #008272;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--greenLight {
+        background-color: #bad80a;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--green {
+        background-color: #107c10;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--greenDark {
+        background-color: #004b1c;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--magentaLight {
+        background-color: #e3008c;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--magenta {
+        background-color: #b4009e;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--purpleLight {
+        background-color: #b4a0ff;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--purple {
+        background-color: #5c2d91;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--black {
+        background-color: #000000;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--orange {
+        background-color: #d83b01;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--red {
+        background-color: #e81123;
+    }
+
+    .vi-Persona-initials.vi-Persona-initials--redDark {
+        background-color: #a80000;
+    }
+
+.vi-Persona-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 48px;
+    z-index: 10;
+    width: 100%;
+}
+
+    .vi-Persona-image[src=''] {
+        display: none;
+    }
+
+.vi-Persona-presence {
+    background-color: #7fba00;
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    top: auto;
+    left: 34px;
+    bottom: -1px;
+    border: 2px solid #ffffff;
+    text-align: center;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Persona-presence {
+        border-color: #000000;
+        box-shadow: 0 0 0 1px #1aebff inset;
+        color: #000000;
+        background-color: #ffffff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Persona-presence {
+        border-color: #ffffff;
+        box-shadow: 0 0 0 1px #37006e inset;
+        color: #ffffff;
+        background-color: #000000;
+    }
+}
+
+.vi-Persona-presenceIcon {
+    color: #ffffff;
+    font-size: 8px;
+    line-height: 12px;
+    vertical-align: top;
+}
+
+.vi-Persona-details {
+    padding: 0 12px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 60px;
+    display: table-cell;
+    width: 100%;
+}
+
+.vi-Persona-primaryText,
+.vi-Persona-secondaryText,
+.vi-Persona-tertiaryText,
+.vi-Persona-optionalText {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.vi-Persona-primaryText {
+    color: #333333;
+    font-weight: 400;
+    font-size: 17px;
+    margin-top: -3px;
+    line-height: 1.4;
+}
+
+.vi-Persona-secondaryText,
+.vi-Persona-tertiaryText,
+.vi-Persona-optionalText {
+    color: #666666;
+    font-weight: 400;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.3;
+}
+
+.vi-Persona-secondaryText {
+    padding-top: 3px;
+}
+
+.vi-Persona-tertiaryText,
+.vi-Persona-optionalText {
+    padding-top: 5px;
+    display: none;
+}
+
+.vi-Persona.vi-Persona--tiny {
+    height: 30px;
+    display: inline-block;
+}
+
+    .vi-Persona.vi-Persona--tiny .vi-Persona-imageArea {
+        overflow: visible;
+        display: none;
+    }
+
+    .vi-Persona.vi-Persona--tiny .vi-Persona-presence {
+        right: auto;
+        top: 10px;
+        left: 0;
+        border: 0;
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Persona.vi-Persona--tiny .vi-Persona-presence {
+        top: 9px;
+        border: 1px solid #ffffff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Persona.vi-Persona--tiny .vi-Persona-presence {
+        border: 1px solid #000000;
+    }
+}
+
+.vi-Persona.vi-Persona--tiny .vi-Persona-details {
+    padding-left: 20px;
+}
+
+.vi-Persona.vi-Persona--tiny .vi-Persona-primaryText {
+    font-size: 14px;
+    padding-top: 9px;
+}
+
+.vi-Persona.vi-Persona--tiny .vi-Persona-secondaryText {
+    display: none;
+}
+
+.vi-Persona.vi-Persona--tiny.vi-Persona--readonly {
+    padding: 0;
+    background-color: transparent;
+}
+
+    .vi-Persona.vi-Persona--tiny.vi-Persona--readonly .vi-Persona-primaryText::after {
+        content: ';';
+    }
+
+.vi-Persona.vi-Persona--xs,
+.vi-Persona.vi-Persona--facePile,
+.vi-Persona.vi-Persona--token {
+    height: 32px;
+}
+
+    .vi-Persona.vi-Persona--xs .vi-Persona-imageArea,
+    .vi-Persona.vi-Persona--xs .vi-Persona-image,
+    .vi-Persona.vi-Persona--facePile .vi-Persona-imageArea,
+    .vi-Persona.vi-Persona--facePile .vi-Persona-image,
+    .vi-Persona.vi-Persona--token .vi-Persona-imageArea,
+    .vi-Persona.vi-Persona--token .vi-Persona-image {
+        max-width: 32px;
+        height: 32px;
+    }
+
+    .vi-Persona.vi-Persona--xs .vi-Persona-placeholder,
+    .vi-Persona.vi-Persona--facePile .vi-Persona-placeholder,
+    .vi-Persona.vi-Persona--token .vi-Persona-placeholder {
+        font-size: 28px;
+        top: 6px;
+    }
+
+    .vi-Persona.vi-Persona--xs .vi-Persona-initials,
+    .vi-Persona.vi-Persona--facePile .vi-Persona-initials,
+    .vi-Persona.vi-Persona--token .vi-Persona-initials {
+        font-size: 12px;
+        line-height: 32px;
+    }
+
+    .vi-Persona.vi-Persona--xs .vi-Persona-presence,
+    .vi-Persona.vi-Persona--facePile .vi-Persona-presence,
+    .vi-Persona.vi-Persona--token .vi-Persona-presence {
+        left: 19px;
+    }
+
+    .vi-Persona.vi-Persona--xs .vi-Persona-details,
+    .vi-Persona.vi-Persona--facePile .vi-Persona-details,
+    .vi-Persona.vi-Persona--token .vi-Persona-details {
+        padding-left: 40px;
+    }
+
+    .vi-Persona.vi-Persona--xs .vi-Persona-primaryText,
+    .vi-Persona.vi-Persona--facePile .vi-Persona-primaryText,
+    .vi-Persona.vi-Persona--token .vi-Persona-primaryText {
+        font-size: 14px;
+        padding-top: 3px;
+    }
+
+    .vi-Persona.vi-Persona--xs .vi-Persona-secondaryText,
+    .vi-Persona.vi-Persona--facePile .vi-Persona-secondaryText,
+    .vi-Persona.vi-Persona--token .vi-Persona-secondaryText {
+        display: none;
+    }
+
+.vi-Persona.vi-Persona--sm {
+    height: 40px;
+}
+
+    .vi-Persona.vi-Persona--sm .vi-Persona-imageArea,
+    .vi-Persona.vi-Persona--sm .vi-Persona-image {
+        max-width: 40px;
+        height: 40px;
+    }
+
+    .vi-Persona.vi-Persona--sm .vi-Persona-placeholder {
+        font-size: 38px;
+        top: 5px;
+    }
+
+    .vi-Persona.vi-Persona--sm .vi-Persona-initials {
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    .vi-Persona.vi-Persona--sm .vi-Persona-presence {
+        left: 27px;
+    }
+
+    .vi-Persona.vi-Persona--sm .vi-Persona-details {
+        padding-left: 48px;
+    }
+
+    .vi-Persona.vi-Persona--sm .vi-Persona-primaryText {
+        font-size: 14px;
+    }
+
+    .vi-Persona.vi-Persona--sm .vi-Persona-primaryText,
+    .vi-Persona.vi-Persona--sm .vi-Persona-secondaryText {
+        padding-top: 1px;
+    }
+
+.vi-Persona.vi-Persona--lg {
+    height: 72px;
+}
+
+    .vi-Persona.vi-Persona--lg .vi-Persona-imageArea,
+    .vi-Persona.vi-Persona--lg .vi-Persona-image {
+        max-width: 72px;
+        height: 72px;
+    }
+
+    .vi-Persona.vi-Persona--lg .vi-Persona-placeholder {
+        font-size: 67px;
+        top: 10px;
+    }
+
+    .vi-Persona.vi-Persona--lg .vi-Persona-initials {
+        font-size: 28px;
+        line-height: 72px;
+    }
+
+    .vi-Persona.vi-Persona--lg .vi-Persona-presence {
+        left: 49px;
+        height: 20px;
+        width: 20px;
+        border-width: 3px;
+    }
+
+    .vi-Persona.vi-Persona--lg .vi-Persona-presenceIcon {
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .vi-Persona.vi-Persona--lg .vi-Persona-details {
+        padding-left: 84px;
+    }
+
+    .vi-Persona.vi-Persona--lg .vi-Persona-secondaryText {
+        padding-top: 3px;
+    }
+
+    .vi-Persona.vi-Persona--lg .vi-Persona-tertiaryText {
+        padding-top: 5px;
+        display: block;
+    }
+
+.vi-Persona.vi-Persona--xl {
+    height: 100px;
+}
+
+    .vi-Persona.vi-Persona--xl .vi-Persona-imageArea,
+    .vi-Persona.vi-Persona--xl .vi-Persona-image {
+        max-width: 100px;
+        height: 100px;
+    }
+
+    .vi-Persona.vi-Persona--xl .vi-Persona-placeholder {
+        font-size: 95px;
+        top: 12px;
+    }
+
+    .vi-Persona.vi-Persona--xl .vi-Persona-initials {
+        font-size: 42px;
+        line-height: 100px;
+    }
+
+    .vi-Persona.vi-Persona--xl .vi-Persona-presence {
+        height: 28px;
+        width: 28px;
+        left: 71px;
+        border-width: 4px;
+    }
+
+    .vi-Persona.vi-Persona--xl .vi-Persona-presenceIcon {
+        line-height: 28px;
+        font-size: 21px;
+        position: relative;
+        top: 1px;
+    }
+
+    .vi-Persona.vi-Persona--xl .vi-Persona-details {
+        padding-left: 120px;
+    }
+
+    .vi-Persona.vi-Persona--xl .vi-Persona-primaryText {
+        font-size: 21px;
+        font-weight: 300;
+        margin-top: 0;
+    }
+
+    .vi-Persona.vi-Persona--xl .vi-Persona-secondaryText {
+        padding-top: 2px;
+    }
+
+    .vi-Persona.vi-Persona--xl .vi-Persona-tertiaryText,
+    .vi-Persona.vi-Persona--xl .vi-Persona-optionalText {
+        padding-top: 5px;
+        display: block;
+    }
+
+.vi-Persona.vi-Persona--darkText .vi-Persona-primaryText {
+    color: #212121;
+}
+
+.vi-Persona.vi-Persona--darkText .vi-Persona-secondaryText,
+.vi-Persona.vi-Persona--darkText .vi-Persona-tertiaryText,
+.vi-Persona.vi-Persona--darkText .vi-Persona-optionalText {
+    color: #333333;
+}
+
+.vi-Persona.vi-Persona--selectable {
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+    .vi-Persona.vi-Persona--selectable:not(.vi-Persona--xl):hover,
+    .vi-Persona.vi-Persona--selectable:not(.vi-Persona--xl):focus {
+        background-color: #deecf9;
+        outline: 1px solid transparent;
+    }
+
+.vi-Persona.vi-Persona--available .vi-Persona-presence {
+    background-color: #7fba00;
+}
+
+.vi-Persona.vi-Persona--away .vi-Persona-presence {
+    background-color: #fcd116;
+}
+
+.vi-Persona.vi-Persona--away .vi-Persona-presenceIcon {
+    position: relative;
+    left: 1px;
+}
+
+.vi-Persona.vi-Persona--blocked .vi-Persona-presence {
+    background-color: #ffffff;
+}
+
+    .vi-Persona.vi-Persona--blocked .vi-Persona-presence::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: 0 0 0 2px #d93b3b inset;
+        border-radius: 50%;
+    }
+
+    .vi-Persona.vi-Persona--blocked .vi-Persona-presence::after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #d93b3b;
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 5px;
+        left: 0;
+    }
+
+.vi-Persona.vi-Persona--blocked.vi-Persona--lg .vi-Persona-presence::after {
+    top: 9px;
+}
+
+.vi-Persona.vi-Persona--blocked.vi-Persona--xl .vi-Persona-presence::after {
+    top: 13px;
+}
+
+.vi-Persona.vi-Persona--busy .vi-Persona-presence {
+    background-color: #d93b3b;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Persona.vi-Persona--busy .vi-Persona-presence {
+        background-color: #1aebff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Persona.vi-Persona--busy .vi-Persona-presence {
+        background-color: #37006e;
+    }
+}
+
+.vi-Persona.vi-Persona--dnd .vi-Persona-presence {
+    background-color: #e81123;
+}
+
+.vi-Persona.vi-Persona--offline .vi-Persona-presence {
+    background-color: #93abbd;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Persona.vi-Persona--offline .vi-Persona-presence {
+        background-color: #000000;
+        box-shadow: 0 0 0 1px #ffffff inset;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Persona.vi-Persona--offline .vi-Persona-presence {
+        background-color: #ffffff;
+        box-shadow: 0 0 0 1px #000000 inset;
+    }
+}
+
+.vi-Persona.vi-Persona--facePile {
+    display: inline-block;
+    width: auto;
+}
+
+    .vi-Persona.vi-Persona--facePile:hover {
+        cursor: pointer;
+    }
+
+    .vi-Persona.vi-Persona--facePile .vi-Persona-imageArea {
+        position: relative;
+        width: 100%;
+        min-width: 32px;
+    }
+
+    .vi-Persona.vi-Persona--facePile .vi-Persona-initials {
+        position: relative;
+    }
+
+    .vi-Persona.vi-Persona--facePile .vi-Persona-details {
+        display: none;
+    }
+
+    .vi-Persona.vi-Persona--facePile .vi-Persona-presence {
+        display: none;
+    }
+
+.vi-Persona.vi-Persona--token {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: auto;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    margin: 4px;
+}
+
+    .vi-Persona.vi-Persona--token:hover {
+        cursor: pointer;
+    }
+
+    .vi-Persona.vi-Persona--token .vi-Persona-actionIcon {
+        border-radius: 20px;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        line-height: 30px;
+        transition: background-color 0.167s cubic-bezier(0.1, 0.9, 0.2, 1);
+        text-align: center;
+    }
+
+        .vi-Persona.vi-Persona--token .vi-Persona-actionIcon:hover {
+            background-color: #eaeaea;
+        }
+
+    .vi-Persona.vi-Persona--token .vi-Persona-imageArea {
+        width: 100%;
+        min-width: 32px;
+    }
+
+    .vi-Persona.vi-Persona--token .vi-Persona-details {
+        height: 30px;
+        display: inline-block;
+        width: auto;
+        padding-right: 8px;
+    }
+
+    .vi-Persona.vi-Persona--token .vi-Persona-primaryText {
+        padding-top: 0;
+        line-height: 34px;
+    }
+
+    .vi-Persona.vi-Persona--token .vi-Persona-initials {
+        position: relative;
+    }
+
+.vi-PersonaCard {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    animation-name: fadeIn, slideUpIn10;
+    -webkit-animation-duration: 0.167s;
+    -moz-animation-duration: 0.167s;
+    -ms-animation-duration: 0.167s;
+    -o-animation-duration: 0.167s;
+    animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+    animation-fill-mode: both;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    outline: 1px solid transparent;
+}
+
+.vi-PersonaCard-persona {
+    background-color: #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+}
+
+.vi-PersonaCard-actions {
+    box-sizing: border-box;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0 10px;
+    background-color: #ffffff;
+    height: 48px;
+}
+
+    .vi-PersonaCard-actions::before {
+        content: '';
+        position: absolute;
+        top: 47px;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid #c8c8c8;
+    }
+
+.vi-PersonaCard-action,
+.vi-PersonaCard-overflow {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 10px;
+    color: #666666;
+    outline: transparent;
+    position: relative;
+    box-sizing: border-box;
+}
+
+    .vi-PersonaCard-action:hover,
+    .vi-PersonaCard-overflow:hover {
+        color: #212121;
+    }
+
+    .vi-PersonaCard-action:active,
+    .vi-PersonaCard-overflow:active {
+        color: #0078d7;
+    }
+
+    .vi-PersonaCard-action::before,
+    .vi-PersonaCard-overflow::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    .vi-PersonaCard-action.is-active,
+    .vi-PersonaCard-overflow.is-active {
+        color: #0078d7;
+    }
+
+        .vi-PersonaCard-action.is-active::after,
+        .vi-PersonaCard-overflow.is-active::after {
+            box-sizing: border-box;
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: 1px solid #c8c8c8;
+            background-color: #ffffff;
+            position: absolute;
+            border-right: 0;
+            border-bottom: 0;
+            bottom: -4px;
+            left: 13px;
+        }
+
+.vi-PersonaCard-overflow {
+    font-size: 14px;
+    color: #333333;
+    float: right;
+    margin-top: -1px;
+}
+
+    .vi-PersonaCard-overflow:hover {
+        color: #0078d7;
+    }
+
+.vi-PersonaCard-orgChart {
+    position: absolute;
+    right: 12px;
+    top: -95px;
+}
+
+.vi-PersonaCard-actionDetailBox {
+    min-height: 48px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.vi-PersonaCard-details {
+    display: none;
+    width: 100%;
+    margin: 0;
+    max-height: 300px;
+    min-height: 48px;
+    color: #666666;
+    padding: 9px 20px;
+    box-sizing: border-box;
+}
+
+    .vi-PersonaCard-details.is-active {
+        display: block;
+    }
+
+    .vi-PersonaCard-details.is-collapsed {
+        height: 30px;
+        overflow: hidden;
+    }
+
+        .vi-PersonaCard-details.is-collapsed .vi-PersonaCard-detailExpander::after {
+            content: '\E70D';
+        }
+
+    .vi-PersonaCard-details[data-detail-id='org'] {
+        max-height: 300px;
+    }
+
+.vi-PersonaCard-detailExpander {
+    color: #333333;
+    cursor: pointer;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 2px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    width: 30px;
+}
+
+    .vi-PersonaCard-detailExpander::after {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-family: 'FabricMDL2Icons';
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        content: '\E70E';
+    }
+
+.vi-PersonaCard-detailLine {
+    color: #333333;
+    line-height: 30px;
+}
+
+.vi-PersonaCard-detailLabel {
+    color: #666666;
+}
+
+.vi-PersonaCard-action.vi-PersonaCard-orgChart::after {
+    display: none;
+}
+
+@media (min-width: 480px) {
+    .vi-PersonaCard {
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+        max-width: 360px;
+        position: relative;
+    }
+
+    .vi-ContextualHost .vi-PersonaCard {
+        box-shadow: none;
+    }
+}
+
+.vi-Pivot {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.vi-Pivot-links {
+    font-size: 0;
+    height: 40px;
+    list-style-type: none;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.vi-Pivot-link {
+    color: #333333;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-right: 8px;
+    padding: 0 8px;
+    text-align: center;
+    vertical-align: top;
+}
+
+    .vi-Pivot-link:hover {
+        cursor: pointer;
+    }
+
+    .vi-Pivot-link::before {
+        background-color: transparent;
+        bottom: 0;
+        content: '';
+        height: 2px;
+        left: 8px;
+        position: absolute;
+        right: 8px;
+        transition: background-color 0.267s cubic-bezier(0.1, 0.25, 0.75, 0.9);
+    }
+
+    .vi-Pivot-link::after {
+        color: transparent;
+        content: attr(title);
+        display: block;
+        font-weight: bold;
+        height: 1px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    .vi-Pivot-link.is-selected {
+        font-weight: 600;
+        position: relative;
+    }
+
+        .vi-Pivot-link.is-selected::before {
+            background-color: #0078d7;
+        }
+
+    .vi-Pivot-link.is-disabled {
+        color: #a6a6a6;
+    }
+
+    .vi-Pivot-link.vi-Pivot-link--overflow {
+        color: #666666;
+    }
+
+        .vi-Pivot-link.vi-Pivot-link--overflow.is-selected {
+            color: #0078d7;
+        }
+
+        .vi-Pivot-link.vi-Pivot-link--overflow:hover:not(.is-selected),
+        .vi-Pivot-link.vi-Pivot-link--overflow:focus:not(.is-selected) {
+            color: #212121;
+        }
+
+        .vi-Pivot-link.vi-Pivot-link--overflow:active {
+            color: #0078d7;
+        }
+
+.vi-Pivot-ellipsis {
+    font-size: 15px;
+    position: relative;
+    top: 0;
+}
+
+.vi-Pivot-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.vi-Pivot.vi-Pivot--large .vi-Pivot-link {
+    font-size: 17px;
+}
+
+    .vi-Pivot.vi-Pivot--large .vi-Pivot-link.is-selected {
+        font-weight: 300;
+    }
+
+    .vi-Pivot.vi-Pivot--large .vi-Pivot-link.vi-Pivot-link--overflow::after {
+        font-size: 17px;
+    }
+
+.vi-Pivot.vi-Pivot--tabs .vi-Pivot-link {
+    height: 40px;
+    background-color: #f4f4f4;
+    line-height: 40px;
+    margin-right: -2px;
+    padding: 0 10px;
+}
+
+    .vi-Pivot.vi-Pivot--tabs .vi-Pivot-link:hover:not(.is-selected):not(.vi-Pivot-link--overflow),
+    .vi-Pivot.vi-Pivot--tabs .vi-Pivot-link:focus:not(.is-selected):not(.vi-Pivot-link--overflow) {
+        color: #000000;
+    }
+
+    .vi-Pivot.vi-Pivot--tabs .vi-Pivot-link:active {
+        color: #ffffff;
+        background-color: #0078d7;
+    }
+
+    .vi-Pivot.vi-Pivot--tabs .vi-Pivot-link.is-selected {
+        background-color: #0078d7;
+        color: #ffffff;
+        font-weight: 300;
+    }
+
+    .vi-Pivot.vi-Pivot--tabs .vi-Pivot-link.vi-Pivot-link--overflow:hover:not(.is-selected),
+    .vi-Pivot.vi-Pivot--tabs .vi-Pivot-link.vi-Pivot-link--overflow:focus:not(.is-selected) {
+        background-color: #ffffff;
+    }
+
+    .vi-Pivot.vi-Pivot--tabs .vi-Pivot-link.vi-Pivot-link--overflow:active {
+        background-color: #0078d7;
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Pivot.vi-Pivot--tabs .vi-Pivot-link.is-selected {
+        font-weight: 600;
+    }
+}
+
+.vi-ProgressIndicator {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+}
+
+.vi-ProgressIndicator-itemName {
+    color: #333333;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 4px;
+    line-height: 20px;
+}
+
+.vi-ProgressIndicator-itemDescription {
+    color: #767676;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+.vi-ProgressIndicator-itemProgress {
+    position: relative;
+    width: 180px;
+    height: 2px;
+    padding: 8px 0;
+}
+
+.vi-ProgressIndicator-progressTrack {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #eaeaea;
+    outline: 1px solid transparent;
+}
+
+.vi-ProgressIndicator-progressBar {
+    background-color: #0078d7;
+    height: 2px;
+    position: absolute;
+    transition: width 0.3s ease;
+    width: 0;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-ProgressIndicator-progressBar {
+        background-color: #ffffff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-ProgressIndicator-progressBar {
+        background-color: #000000;
+    }
+}
+
+.vi-SearchBox {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    height: 36px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 10px;
+    display: inline-block;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+    .vi-SearchBox.is-active {
+        z-index: 10;
+    }
+
+        .vi-SearchBox.is-active .vi-SearchBox-label {
+            display: none;
+        }
+
+        .vi-SearchBox.is-active .vi-SearchBox-clear {
+            display: block;
+        }
+
+    .vi-SearchBox:hover {
+        background-color: #deecf9;
+    }
+
+        .vi-SearchBox:hover .vi-SearchBox-label {
+            color: #000000;
+        }
+
+            .vi-SearchBox:hover .vi-SearchBox-label .vi-Icon {
+                color: #333333;
+            }
+
+    .vi-SearchBox.is-disabled {
+        background-color: #f4f4f4;
+        pointer-events: none;
+    }
+
+        .vi-SearchBox.is-disabled .vi-SearchBox-label {
+            color: #a6a6a6;
+        }
+
+        .vi-SearchBox.is-disabled .vi-SearchBox-icon {
+            color: #a6a6a6;
+        }
+
+        .vi-SearchBox.is-disabled .vi-SearchBox-field {
+            color: #a6a6a6;
+            background-color: transparent;
+            border-color: #f4f4f4;
+            cursor: default;
+        }
+
+.vi-SearchBox-clear {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+    .vi-SearchBox-clear .vi-CommandButton-button {
+        background-color: #0078d7;
+        color: #ffffff;
+        height: 36px;
+    }
+
+    .vi-SearchBox-clear .vi-CommandButton-icon {
+        color: #ffffff;
+    }
+
+.vi-SearchBox-icon {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: inline-block;
+    font-size: 16px;
+    width: 16px;
+    margin-left: 12px;
+    margin-right: 6px;
+    color: #0078d7;
+    vertical-align: top;
+}
+
+.vi-SearchBox-field {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: 1px solid #69afe5;
+    outline: transparent 1px solid;
+    font-weight: 300;
+    font-size: 14px;
+    color: #000000;
+    height: 36px;
+    padding: 6px 3px 7px 45px !important; /*viizcom: classic SP page will break this issue 5999*/
+    width: 208px;
+    background-color: transparent;
+    z-index: 5;
+    transition: padding-left 0.167s;
+}
+
+    .vi-SearchBox-field:focus {
+        padding: 6px 32px 7px 10px !important; /*viizcom: classic SP page will break this issue 5999*/
+        border-color: #0078d7;
+        background-color: #deecf9;
+    }
+
+    .vi-SearchBox-field::-ms-clear {
+        display: none;
+    }
+
+.vi-SearchBox-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36px;
+    line-height: 36px;
+    color: #666666;
+}
+
+.vi-SearchBox.vi-SearchBox--commandBar {
+    background-color: #ffffff;
+    width: 208px;
+    height: 40px;
+}
+
+    .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-field,
+    .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-label {
+        height: 40px;
+    }
+
+    .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-field {
+        transition: none;
+        border: 0;
+    }
+
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-field:focus {
+            background-color: transparent;
+            padding: 6px 3px 7px 45px;
+        }
+
+    .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-clear,
+    .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-filter,
+    .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-exit {
+        display: none;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        color: #a6a6a6;
+    }
+
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-clear .vi-CommandButton-button,
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-filter .vi-CommandButton-button,
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-exit .vi-CommandButton-button {
+            height: 40px;
+            background-color: transparent;
+        }
+
+    .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-clear {
+        right: 8px;
+    }
+
+    .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-filter {
+        right: 8px;
+    }
+
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-filter .vi-CommandButton-icon {
+            color: #0078d7;
+        }
+
+    .vi-SearchBox.vi-SearchBox--commandBar::before {
+        position: absolute;
+        content: ' ';
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 8px;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .vi-SearchBox.vi-SearchBox--commandBar:hover {
+        background-color: #ffffff;
+    }
+
+        .vi-SearchBox.vi-SearchBox--commandBar:hover .vi-SearchBox-label {
+            color: #212121;
+        }
+
+        .vi-SearchBox.vi-SearchBox--commandBar:hover .vi-SearchBox-icon {
+            color: #0078d7;
+        }
+
+    .vi-SearchBox.vi-SearchBox--commandBar:focus {
+        background-color: transparent;
+    }
+
+    .vi-SearchBox.vi-SearchBox--commandBar.is-active .vi-CommandButton .vi-SearchBox-exit,
+    .vi-SearchBox.vi-SearchBox--commandBar.is-active .vi-CommandButton .vi-SearchBox-filter {
+        display: block;
+    }
+
+    .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed {
+        width: 50px;
+        min-height: 40px;
+        z-index: 0;
+        background-color: #f4f4f4;
+    }
+
+        .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed .vi-SearchBox-text {
+            display: none;
+        }
+
+        .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed .vi-SearchBox-field {
+            cursor: pointer;
+            width: calc(100% - 50px);
+        }
+
+        .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed::before {
+            visibility: hidden;
+        }
+
+        .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed.is-active {
+            width: 100%;
+        }
+
+            .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed.is-active .vi-SearchBox-field {
+                display: block;
+                cursor: text;
+            }
+
+            .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed.is-active .vi-SearchBox-text {
+                display: inline-block;
+            }
+
+@media only screen and (max-width: 639px) {
+    .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed.is-active {
+        width: 100%;
+    }
+
+        .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed.is-active .vi-SearchBox-clear {
+            display: inline-block;
+            right: 58px;
+        }
+
+        .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed.is-active .vi-SearchBox-filter {
+            display: inline-block;
+        }
+
+        .vi-SearchBox.vi-SearchBox--commandBar.is-collapsed.is-active.is-animated {
+            transition: width 0.167s cubic-bezier(0.1, 0.9, 0.2, 1);
+        }
+}
+
+.vi-SearchBox.vi-SearchBox--commandBar.is-collapsed.is-active::before {
+    visibility: visible;
+}
+
+.vi-SearchBox.vi-SearchBox--commandBar.has-text .vi-SearchBox-clear {
+    display: inline-block;
+}
+
+    .vi-SearchBox.vi-SearchBox--commandBar.has-text .vi-SearchBox-clear .vi-CommandButton-icon {
+        color: #a6a6a6;
+    }
+
+        .vi-SearchBox.vi-SearchBox--commandBar.has-text .vi-SearchBox-clear .vi-CommandButton-icon:active {
+            color: #0078d7;
+        }
+
+@media only screen and (min-width: 1024px) {
+    .vi-SearchBox.vi-SearchBox--commandBar {
+        background-color: #ffffff;
+        border-right: 1px solid #eaeaea;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .vi-SearchBox.vi-SearchBox--commandBar {
+        height: 44px;
+    }
+
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-icon,
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-exit,
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-field,
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-label {
+            height: 44px;
+            line-height: 44px;
+        }
+
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-icon,
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-exit,
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-filter,
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-clear {
+            font-size: 20px;
+        }
+
+            .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-icon .vi-CommandButton-button,
+            .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-exit .vi-CommandButton-button,
+            .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-filter .vi-CommandButton-button,
+            .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-clear .vi-CommandButton-button {
+                height: 44px;
+            }
+
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-field,
+        .vi-SearchBox.vi-SearchBox--commandBar .vi-SearchBox-label {
+            font-size: 16px;
+        }
+}
+
+.vi-SearchBox.vi-SearchBox--commandBar.is-active {
+    background-color: #ffffff;
+}
+
+    .vi-SearchBox.vi-SearchBox--commandBar.is-active .vi-SearchBox-label {
+        display: block;
+        line-height: 40px;
+        height: 40px;
+    }
+
+        .vi-SearchBox.vi-SearchBox--commandBar.is-active .vi-SearchBox-label .vi-SearchBox-text {
+            display: none;
+        }
+
+    .vi-SearchBox.vi-SearchBox--commandBar.is-active::before {
+        visibility: visible;
+    }
+
+@media only screen and (max-width: 639px) {
+    .vi-SearchBox.vi-SearchBox--commandBar.is-active .vi-SearchBox-field {
+        width: 100%;
+        padding-right: 100px;
+    }
+
+    .vi-SearchBox.vi-SearchBox--commandBar.is-active .vi-SearchBox-icon {
+        display: none;
+    }
+
+    .vi-SearchBox.vi-SearchBox--commandBar.is-active .vi-SearchBox-exit {
+        display: inline-block;
+    }
+
+    .vi-SearchBox.vi-SearchBox--commandBar.is-active.has-text .vi-SearchBox-filter .vi-CommandButton-icon {
+        color: #a6a6a6;
+    }
+}
+
+.vi-Spinner {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    height: 20px;
+}
+
+    .vi-Spinner.vi-Spinner--large {
+        height: 28px;
+    }
+
+        .vi-Spinner.vi-Spinner--large .vi-Spinner-label {
+            left: 34px;
+            top: 6px;
+        }
+
+.vi-Spinner-circle {
+    position: absolute;
+    border-radius: 100px;
+    background-color: #0078d7;
+    opacity: 0;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Spinner-circle {
+        background-color: #ffffff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Spinner-circle {
+        background-color: #000000;
+    }
+}
+
+.vi-Spinner-label {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    font-size: 12px;
+    font-weight: 400;
+    color: #0078d7;
+    left: 28px;
+    top: 2px;
+}
+
+.vi-Table {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vi-Table--fixed {
+    table-layout: fixed;
+}
+
+.vi-Table tr,
+.vi-Table-row {
+    display: table-row;
+    line-height: 30px;
+    font-weight: 300;
+    font-size: 12px;
+    color: #333333;
+}
+
+    .vi-Table tr.is-selected,
+    .vi-Table-row.is-selected {
+        background-color: #b3d6f2;
+    }
+
+        .vi-Table tr.is-selected .vi-Table-rowCheck,
+        .vi-Table-row.is-selected .vi-Table-rowCheck {
+            background-color: #0078d7;
+        }
+
+            .vi-Table tr.is-selected .vi-Table-rowCheck::before,
+            .vi-Table-row.is-selected .vi-Table-rowCheck::before {
+                display: none;
+            }
+
+            .vi-Table tr.is-selected .vi-Table-rowCheck::after,
+            .vi-Table-row.is-selected .vi-Table-rowCheck::after {
+                content: '\E73A';
+                color: #ffffff;
+            }
+
+.vi-Table th,
+.vi-Table td,
+.vi-Table-cell {
+    display: table-cell;
+    padding: 0 10px;
+}
+
+.vi-Table thead th,
+.vi-Table-head {
+    font-weight: 300;
+    font-size: 11px;
+    color: #666666;
+}
+
+    .vi-Table thead td,
+    .vi-Table thead th,
+    .vi-Table thead .vi-Table-cell,
+    .vi-Table thead .vi-Table-rowCheck,
+    .vi-Table-head td,
+    .vi-Table-head th,
+    .vi-Table-head .vi-Table-cell,
+    .vi-Table-head .vi-Table-rowCheck {
+        font-weight: normal;
+        text-align: left;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+.vi-Table-rowCheck {
+    display: table-cell;
+    width: 20px;
+    position: relative;
+    padding: 0;
+}
+
+    .vi-Table-rowCheck::after {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-family: 'FabricMDL2Icons';
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        content: '\E739';
+        color: #a6a6a6;
+        font-size: 12px;
+        position: absolute;
+        left: 4px;
+        top: 1px;
+    }
+
+.vi-Table--selectable tr:hover,
+.vi-Table--selectable .vi-Table-row:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
+    outline: 1px solid transparent;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Table-row.is-selected .vi-Table-rowCheck {
+        background: none;
+    }
+
+        .vi-Table-row.is-selected .vi-Table-rowCheck::before {
+            display: block;
+        }
+}
+
+.vi-Label {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 12px;
+    font-weight: 400;
+    box-sizing: border-box;
+    display: block;
+    padding: 5px 0;
+}
+
+    .vi-Label.is-required::after {
+        content: ' *';
+        color: #a80000;
+    }
+
+    .vi-Label.is-disabled {
+        color: #a6a6a6;
+    }
+
+.vi-TextField {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+    .vi-TextField .vi-Label {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .vi-TextField.is-disabled .vi-TextField-field {
+        background-color: #f4f4f4;
+        border-color: #f4f4f4;
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .vi-TextField.is-disabled::-webkit-input-placeholder {
+        color: #a6a6a6;
+    }
+
+    .vi-TextField.is-disabled::-moz-placeholder {
+        color: #a6a6a6;
+    }
+
+    .vi-TextField.is-disabled:-moz-placeholder {
+        color: #a6a6a6;
+    }
+
+    .vi-TextField.is-disabled:-ms-input-placeholder {
+        color: #a6a6a6;
+    }
+
+    .vi-TextField.is-required .vi-Label::after {
+        content: ' *';
+        color: #a80000;
+    }
+
+    .vi-TextField.is-required::-webkit-input-placeholder::after {
+        content: ' *';
+        color: #a80000;
+    }
+
+    .vi-TextField.is-required::-moz-placeholder::after {
+        content: ' *';
+        color: #a80000;
+    }
+
+    .vi-TextField.is-required:-moz-placeholder::after {
+        content: ' *';
+        color: #a80000;
+    }
+
+    .vi-TextField.is-required:-ms-input-placeholder::after {
+        content: ' *';
+        color: #a80000;
+    }
+
+    .vi-TextField.is-active {
+        border-color: #0078d7;
+    }
+
+.vi-TextField-field {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: 1px solid #c8c8c8;
+    border-radius: 0;
+    font-weight: 300;
+    font-size: 14px;
+    color: #333333;
+    height: 32px;
+    padding: 6px 12px 7px;
+    width: 100%;
+    min-width: 180px;
+    outline: 0;
+    text-overflow: ellipsis;
+}
+
+    .vi-TextField-field:hover {
+        border-color: #767676;
+    }
+
+    .vi-TextField-field:focus {
+        border-color: #0078d7;
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-TextField-field:hover,
+    .vi-TextField-field:focus {
+        border-color: #1aebff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-TextField-field:hover,
+    .vi-TextField-field:focus {
+        border-color: #37006e;
+    }
+}
+
+.vi-TextField-field[disabled] {
+    background-color: #f4f4f4;
+    border-color: #f4f4f4;
+    pointer-events: none;
+    cursor: default;
+}
+
+.vi-TextField-field::-webkit-input-placeholder {
+    color: #666666;
+}
+
+.vi-TextField-field::-moz-placeholder {
+    color: #666666;
+}
+
+.vi-TextField-field:-moz-placeholder {
+    color: #666666;
+}
+
+.vi-TextField-field:-ms-input-placeholder {
+    color: #666666;
+}
+
+.vi-TextField-description {
+    color: #767676;
+    font-size: 11px;
+}
+
+.vi-TextField.vi-TextField--placeholder {
+    position: relative;
+    background-color: #ffffff;
+}
+
+    .vi-TextField.vi-TextField--placeholder .vi-TextField-field {
+        position: relative;
+        background-color: transparent;
+        z-index: 5;
+    }
+
+    .vi-TextField.vi-TextField--placeholder .vi-Label {
+        position: absolute;
+        font-weight: 300;
+        font-size: 14px;
+        color: #666666;
+        padding: 6px 12px 7px;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .vi-TextField.vi-TextField--placeholder.is-disabled {
+        color: #a6a6a6;
+    }
+
+        .vi-TextField.vi-TextField--placeholder.is-disabled .vi-Label {
+            color: #a6a6a6;
+        }
+
+.vi-TextField.vi-TextField--underlined {
+    border-bottom: 1px solid #c8c8c8;
+    display: table;
+    width: 100%;
+    min-width: 180px;
+}
+
+    .vi-TextField.vi-TextField--underlined:hover {
+        border-color: #767676;
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-TextField.vi-TextField--underlined:hover {
+        border-color: #1aebff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-TextField.vi-TextField--underlined:hover {
+        border-color: #37006e;
+    }
+}
+
+.vi-TextField.vi-TextField--underlined:active,
+.vi-TextField.vi-TextField--underlined:focus {
+    border-color: #0078d7;
+}
+
+.vi-TextField.vi-TextField--underlined .vi-Label {
+    font-size: 14px;
+    margin-right: 8px;
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 12px;
+    padding-top: 9px;
+    height: 32px;
+    width: 1%;
+    white-space: nowrap;
+}
+
+.vi-TextField.vi-TextField--underlined .vi-TextField-field {
+    border: 0;
+    float: left;
+    display: table-cell;
+    text-align: left;
+    padding-top: 8px;
+    padding-bottom: 3px;
+}
+
+    .vi-TextField.vi-TextField--underlined .vi-TextField-field:active,
+    .vi-TextField.vi-TextField--underlined .vi-TextField-field:focus,
+    .vi-TextField.vi-TextField--underlined .vi-TextField-field:hover {
+        outline: 0;
+    }
+
+.vi-TextField.vi-TextField--underlined.is-disabled {
+    border-bottom-color: #eaeaea;
+}
+
+    .vi-TextField.vi-TextField--underlined.is-disabled .vi-Label {
+        color: #a6a6a6;
+    }
+
+    .vi-TextField.vi-TextField--underlined.is-disabled .vi-TextField-field {
+        background-color: transparent;
+        color: #a6a6a6;
+    }
+
+.vi-TextField.vi-TextField--underlined.is-active {
+    border-color: #0078d7;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-TextField.vi-TextField--underlined.is-active {
+        border-color: #1aebff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-TextField.vi-TextField--underlined.is-active {
+        border-color: #37006e;
+    }
+}
+
+.vi-TextField.vi-TextField--multiline .vi-TextField-field {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #666666;
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    min-height: 60px;
+    min-width: 260px;
+    padding-top: 6px;
+    overflow: auto;
+}
+
+.vi-Label {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #333333;
+    font-size: 12px;
+    font-weight: 400;
+    box-sizing: border-box;
+    display: block;
+    padding: 5px 0;
+}
+
+    .vi-Label.is-required::after {
+        content: ' *';
+        color: #a80000;
+    }
+
+    .vi-Label.is-disabled {
+        color: #a6a6a6;
+    }
+
+.vi-Toggle {
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    position: relative;
+    display: block;
+    margin-bottom: 26px;
+}
+.vi-Table .vi-Toggle {
+    margin-bottom: 0;
+}
+    .vi-Toggle .vi-Label {
+        position: relative;
+        top: -2px;
+        padding: 0 0 0 50px;
+    }
+
+    .vi-Toggle .vi-Toggle-field::before {
+        position: absolute;
+        top: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        content: '';
+        left: 4px;
+        background-color: #666666;
+        outline: 1px solid transparent;
+        transition-property: background, left;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.23, 1);
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Toggle .vi-Toggle-field::before {
+        border: 2.5px solid #ffffff;
+        height: 15px;
+        outline: 0;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Toggle .vi-Toggle-field::before {
+        border-color: #000000;
+    }
+}
+
+.vi-Toggle .vi-Toggle-field::before {
+    right: auto;
+}
+
+.vi-Toggle .vi-Toggle-field .vi-Label--off {
+    display: block;
+}
+
+.vi-Toggle .vi-Toggle-field .vi-Label--on {
+    display: none;
+}
+
+.vi-Toggle .vi-Toggle-field.is-selected {
+    background-color: #0078d7;
+    border-color: #0078d7;
+}
+
+    .vi-Toggle .vi-Toggle-field.is-selected::before {
+        position: absolute;
+        top: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        content: '';
+        right: 4px;
+        background-color: #666666;
+        outline: 1px solid transparent;
+        transition-property: background, left;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.23, 1);
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Toggle .vi-Toggle-field.is-selected::before {
+        border: 2.5px solid #ffffff;
+        height: 15px;
+        outline: 0;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Toggle .vi-Toggle-field.is-selected::before {
+        border-color: #000000;
+    }
+}
+
+.vi-Toggle .vi-Toggle-field.is-selected::before {
+    background-color: #ffffff;
+    left: 28px;
+}
+
+.vi-Toggle .vi-Toggle-field.is-selected .vi-Label--off {
+    display: none;
+}
+
+.vi-Toggle .vi-Toggle-field.is-selected .vi-Label--on {
+    display: block;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Toggle .vi-Toggle-field.is-selected {
+        background-color: #ffffff;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Toggle .vi-Toggle-field.is-selected {
+        background-color: #000000;
+    }
+}
+
+.vi-Toggle:focus + .vi-Toggle-field,
+.vi-Toggle:hover + .vi-Toggle-field {
+    border-color: #666666;
+}
+
+    .vi-Toggle:focus + .vi-Toggle-field::before,
+    .vi-Toggle:hover + .vi-Toggle-field::before {
+        background-color: #333333;
+    }
+
+.vi-Toggle:focus:checked + .vi-Toggle-field,
+.vi-Toggle:hover:checked + .vi-Toggle-field {
+    background-color: #106ebe;
+    border-color: #106ebe;
+}
+
+    .vi-Toggle:focus:checked + .vi-Toggle-field::before,
+    .vi-Toggle:hover:checked + .vi-Toggle-field::before {
+        background-color: #ffffff;
+    }
+
+.vi-Toggle:active:checked + .vi-Toggle-field {
+    background-color: #005a9e;
+    border-color: #005a9e;
+}
+
+.vi-Toggle .vi-Toggle-field:focus,
+.vi-Toggle .vi-Toggle-field:hover {
+    border-color: #333333;
+}
+
+.vi-Toggle .vi-Toggle-field.is-selected:focus,
+.vi-Toggle .vi-Toggle-field.is-selected:hover {
+    background-color: #106ebe;
+    border-color: #106ebe;
+}
+
+.vi-Toggle .vi-Toggle-field .vi-Label {
+    color: #000000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.vi-Toggle .vi-Toggle-field:hover .vi-Label {
+    color: #000000;
+}
+
+.vi-Toggle .vi-Toggle-field:active .vi-Label {
+    color: #333333;
+}
+
+.vi-Toggle.is-disabled .vi-Label {
+    color: #a6a6a6;
+}
+
+.vi-Toggle.is-disabled .vi-Toggle-field {
+    background-color: #ffffff;
+    border-color: #c8c8c8;
+    pointer-events: none;
+    cursor: default;
+}
+
+    .vi-Toggle.is-disabled .vi-Toggle-field::before {
+        background-color: #c8c8c8;
+    }
+
+@media screen and (-ms-high-contrast: active) {
+    .vi-Toggle.is-disabled .vi-Toggle-field,
+    .vi-Toggle.is-disabled .vi-Toggle-field::before {
+        border-color: #00ff00;
+    }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+    .vi-Toggle.is-disabled .vi-Toggle-field,
+    .vi-Toggle.is-disabled .vi-Toggle-field::before {
+        border-color: #600000;
+    }
+}
+
+.vi-Toggle-description {
+    position: relative;
+    font-size: 14px;
+    vertical-align: top;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.vi-Toggle-field {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 2px solid #a6a6a6;
+    border-radius: 20px;
+    cursor: pointer;
+    transition-property: background, left, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.23, 1);
+    outline: 0;
+}
+
+    .vi-Toggle-field:hover,
+    .vi-Toggle-field:focus {
+        border-color: #666666;
+    }
+
+.vi-Toggle-input {
+    display: none;
+}
+
+.vi-Toggle.vi-Toggle--textLeft {
+    width: 225px;
+    margin-bottom: 40px;
+}
+
+    .vi-Toggle.vi-Toggle--textLeft .vi-Toggle-description {
+        display: inline-block;
+        max-width: 150px;
+        top: -3px;
+        margin-bottom: 0;
+    }
+
+    .vi-Toggle.vi-Toggle--textLeft .vi-Toggle-field {
+        float: right;
+    }
+
+/*#region viizcom fixes*/
+.vi-Error, .is-error, .has-error {
+    color: #a80000;
+}
+/*viizCom paging control under content*/
+.is-below .vi-CommandButton.vi-CommandButton--pivot.is-active:before, .is-below .vi-CommandButton.vi-CommandButton--pivot:hover:before {
+    bottom: unset;
+    top: 0;
+}
+/*viizcom End*/
+
+.vi-ContextualMenu.vi-ContextualMenu--hasIcons .vi-Icon,
+.vi-ContextualMenu.vi-ContextualMenu--hasChecks .vi-Icon {
+    left: 0; /*viizCom icons appear too far to the right, dvp paging.*/
+}
+
+
+.vi-Dialog {
+    z-index: 21; /*viizCom: was 10. need to be 21, 1 higher than overlay.*/
+}
+
+/*viizCom add support for icons in dropdown*/
+li.vi-Dropdown-item > i.vi-Icon:after {
+    content: "\00a0\00a0\00a0\00a0";
+}
+/*viizCom end*/
+
+.vi-Dropdown .vi-Label {
+    /*viizcom: match vi-TextField label size*/
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+.vi-Panel .vi-Dropdown-items {
+    /*
+  viizcom this messes up dropdowns inside panels
+  box-shadow: none;
+  overflow-y: auto;
+  padding-top: 4px;
+  max-height: 100%;*/
+    box-shadow: none;
+    overflow-y: scroll;
+    padding-top: 0;
+    max-height: 200px;
+}
+
+.vi-MessageBanner-clipper {
+    /*viizCom: fix this for mobile... it would never clip text without it.*/
+    width: 100%;
+}
+
+@media screen and (max-width: 479px) {
+    /*viizCom: fix this for mobile... it would never clip text without it.*/
+    .vi-MessageBanner {
+        min-width: unset;
+        height: unset;
+    }
+    /*viizCom end*/
+
+    .vi-MessageBanner-text {
+        max-width: 80%; /*viizCom: fix this for mobile... it would never clip text without it.*/
+    }
+}
+
+
+.vi-ContextualHost {
+    z-index: 1000; /*viizcom: was 10, cannot use this inside a popup or a panel.*/
+}
+
+.vi-MessageBar {
+    /*viizcom: this solves a problem in classic SP pages where the padding isn't working.*/
+    border-collapse: initial;
+}
+
+    /*viizCom added: vi-MessageBar--FullWidth class to make MessageBar 100% width*/
+    .vi-MessageBar.vi-MessageBar--FullWidth {
+        width: 100%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+/*viizCom - end*/
+
+.vi-Overlay {
+    z-index: 20; /*viizCom: it was 0. It didnt cover a links, or dropdown carets with 0. Needs to be less than 20 so it doesn't cover Panel*/
+}
+
+.vi-Panel {
+    z-index: 21; /* viizcom - was 10. has to be higher than overlay */
+}
+
+.vi-PanelHost {
+    z-index: 1000; /*viizCom was 10 make panel above web part properties pane*/
+}
+
+.vi-SearchBox.has-text > label.vi-SearchBox-label .vi-SearchBox-text {
+    /* viizCom: hide the placeholder label when there is search text */
+    display: none;
+}
+
+.vi-SearchBox-label {
+    z-index: 5; /*viizcom: only on modern pages, without this the label is hidden*/
+}
+
+.vi-Table--selectable tr:hover,
+.vi-Table--selectable .vi-Table-row:hover {
+    /*outline: 1px solid transparent; viizCom: causes table to have scroll on hovering over a row*/
+    outline: none;
+}
+/*#endregion*/
+
+/*#region viizcom custom controls*/
+.vi-Accordion-Container {
+    min-width: 600px;
+}
+
+.vi-Accordion-Section-Simple,
+.vi-Accordion-Section {
+    position: relative;
+}
+
+.vi-Accordion-Section-Simple {
+    margin-top: 8px;
+    border-top: #0072c5 solid 1px;
+}
+
+.vi-Accordion-Section {
+    min-width: 600px;
+}
+
+.vi-Accordion-Toggle-Simple,
+.vi-Accordion-Toggle {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+.vi-Accordion-Toggle {
+    background-color: #0072c5;
+    color: #fff;
+    border: 1px #c6c6c6 solid;
+}
+
+.vi-Accordion-Toggle-Title-Simple {
+    color: #0072c5;
+    font-size: 21px;
+    padding-left: 8px;
+    font-weight: 100;
+}
+
+.vi-Accordion-Toggle-Title {
+    padding: 12px 24px 12px 24px;
+}
+
+.vi-Accordion-Toggle-Icons {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.vi-Toggle-Icons {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.vi-Accordion-Toggle-Icons > .vi-Icon + .vi-Icon {
+    margin-left: 8px;
+}
+
+.vi-Accordion-Content-Simple,
+.vi-Accordion-Content {
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+    display: none;
+}
+
+.vi-Accordion-Content {
+    min-width: 600px;
+    border-bottom: 1px #c6c6c6 solid;
+    border-left: 1px #c6c6c6 solid;
+    border-right: 1px #c6c6c6 solid;
+    padding-left: 20px;
+}
+
+.is-open > .vi-Accordion-Content-Simple,
+.is-open > .vi-Accordion-Content {
+    display: block;
+    -moz-animation-name: fadeIn, slideDownIn20;
+    -o-animation-name: fadeIn, slideDownIn20;
+    -webkit-animation-name: fadeIn, slideDownIn20;
+    animation-name: fadeIn, slideDownIn20;
+    -moz-animation-duration: .367s;
+    -o-animation-duration: .367s;
+    -webkit-animation-duration: .367s;
+    animation-duration: .367s;
+}
+
+.vi-Accordion-Toggle-Icons .vi-Icon--ChevronDown,
+.vi-Toggle-Icons .vi-Icon--ChevronDown {
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -moz-transition: -webkit-transform .1s linear;
+    -o-transition: -webkit-transform .1s linear;
+    -webkit-transition: -webkit-transform .1s linear;
+    transition: -webkit-transform .1s linear;
+    -moz-transition-duration: 0.1s;
+    -o-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+}
+
+.is-open > .vi-Accordion-Toggle > .vi-Accordion-Toggle-Icons .vi-Icon--ChevronDown,
+.is-open > .vi-Accordion-Toggle-Simple > .vi-Toggle-Icons .vi-Icon--ChevronDown {
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(-180deg);
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.vi-Dropdown .vi-SearchBox {
+    position: absolute;
+    z-index: 1000;
+    top: 33px;
+    left: 0;
+}
+
+.vi-Dropdown-items.vi-DropDown--multiselect .vi-Dropdown-item {
+    padding-left: 26px !important; /*Otherwise this would be gone when inside a panel. See DVP designer*/
+}
+
+    .vi-Dropdown-items.vi-DropDown--multiselect .vi-Dropdown-item.is-selected:before {
+        content: "\E73E";
+        font-family: FabricMDL2Icons;
+        position: absolute;
+        left: 7px;
+        font-weight: 800;
+    }
+
+
+.vi-Table tr.is-unseen::after {
+    border-right: 10px solid transparent;
+    border-top: 10px solid #0078d7;
+    left: 0;
+    position: absolute;
+    clear: both;
+    content: '';
+}
+
+.vi-Table tr.is-unread {
+    border-left: 3px solid #0078d7;
+}
+/*#endregion*/

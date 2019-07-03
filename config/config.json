@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "tabbedpage-layout-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/tabbedpageLayout/TabbedpageLayoutWebPart.js",
+          "manifest": "./src/webparts/tabbedpageLayout/TabbedpageLayoutWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": "node_modules/jquery/dist/jquery.min.js",
+    "office-fabric": {
+      "path": "https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js",
+      "globalName": "Fabric"
+    }
+  },
+  "localizedResources": {
+    "TabbedpageLayoutWebPartStrings": "lib/webparts/tabbedpageLayout/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}
