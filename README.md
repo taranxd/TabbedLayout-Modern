@@ -2,7 +2,7 @@
 
 Allows you to configure multiple sections in a modern page into Tabs using Fabric UI and Fabric JS without React.
 
-![](tabs.gif)
+![TabbedLayout-Modern](tabs.gif)
 
 ### Building the code
 
