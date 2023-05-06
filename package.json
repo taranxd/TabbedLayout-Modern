@@ -23,7 +23,7 @@
     "@types/jquery": "^3.3.29",
     "@types/webpack-env": "1.13.1",
     "combokeys": "^3.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jqueryui": "^1.11.1",
     "office-ui-fabric": "^2.6.3"
   },
